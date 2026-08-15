@@ -239,3 +239,9 @@
 - [x] Inspect the current project title and contact ScrollFloat text.
 - [x] Apply the requested two-line breaks without changing ScrollFloat animation settings.
 - [x] Verify desktop/mobile layout and save a checkpoint.
+
+## Journey Typography and ScrollFloat Character Fix
+
+- [x] Inspect the duplicated Journey style props and ScrollFloat character bounds.
+- [x] Preserve the intended 18px Journey typography and fix clipped g/y characters.
+- [x] Verify desktop/mobile rendering and save a checkpoint.

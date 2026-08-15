@@ -163,3 +163,20 @@ footer { font-size: 12px; }
   .project-scroll-float { font-size: clamp(28px, 8vw, 38px); }
   .contact-scroll-float { font-size: clamp(52px, 15vw, 100px); margin-top: 95px; }
 }
+
+/* Journey visual-editor typography: preserve 18px without malformed inline JSX. */
+.journey-section .section-label,
+.journey-section .aside-note,
+.journey-section .journey-row > span,
+.journey-section .journey-row h3,
+.journey-section .journey-row p { font-size: 18px; }
+
+/* ScrollFloat descender safety: keep g, y, p, and similar glyphs inside the clipped stage. */
+.scroll-float { padding-bottom: .12em; }
+.scroll-float-text { line-height: 1.58; }
+.char { padding-bottom: .08em; }
+@media (max-width: 800px) {
+  .journey-section .journey-row > span,
+  .journey-section .journey-row h3,
+  .journey-section .journey-row p { font-size: 18px; }
+}
