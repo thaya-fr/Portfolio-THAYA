@@ -41,16 +41,16 @@ const skills = [
 ];
 
 const certifications = [
-  { issuer: "SRM Institute", title: "SRM Chennai Hackathon", detail: "Recognized among the Top 50 teams for presenting an innovative solution, explaining the problem clearly, and demonstrating thoughtful problem-solving." },
-  { issuer: "MongoDB", title: "MongoDB Basics for Students", detail: "A practical introduction to MongoDB fundamentals, document databases, collections, queries, and the core ideas student developers use to build data-driven applications." },
-  { issuer: "MongoDB", title: "AI and Innovation", detail: "Explores how MongoDB supports resilient AI strategies through flexible data models, reliable application architecture, and a foundation that can adapt as intelligent products grow." },
-  { issuer: "MongoDB", title: "AI-Powered Search", detail: "Covers how vector search connects semantic embeddings with application data to build AI-powered discovery experiences that return more useful and context-aware results." },
-  { issuer: "MongoDB", title: "RAG Apps", detail: "Introduces the building blocks of RAG applications, from retrieving relevant context to grounding generated responses with MongoDB-backed knowledge and structured data." },
-  { issuer: "MongoDB", title: "AI Agents", detail: "Explores the foundations of AI agents, including tool use, memory, retrieval, and the role of MongoDB in helping agents work with persistent application context." },
-  { issuer: "MathWorks", title: "MATLAB Onramp", detail: "Hands-on certification covering MATLAB basics, matrix operations, scripting, visualization, and scientific computing workflows for solving technical problems." },
-  { issuer: "MATLAB", title: "Statistics Certification", detail: "Covers probability, statistical methods, data interpretation, and analytical reasoning fundamentals that support machine learning and scientific decision-making." },
-  { issuer: "MATLAB", title: "Linear Algebra", detail: "Covers vector spaces, matrices, linear transformations, and the mathematical structures that form a foundation for machine learning and engineering systems." },
-  { issuer: "CyberSecurity", title: "Cybersecurity Foundation", detail: "Introduces core cybersecurity principles, common digital risks, safe practices, and the responsible habits needed to protect systems and information." },
+  { issuer: "SRM Institute", title: "SRM Chennai Hackathon", detail: "Recognized among the Top 50 teams for presenting an innovative solution, explaining the problem clearly, and demonstrating thoughtful problem-solving. The recognition reflects both technical creativity and confident communication." },
+  { issuer: "MongoDB", title: "MongoDB Basics for Students", detail: "A practical introduction to MongoDB fundamentals, document databases, collections, queries, and the core ideas student developers use to build data-driven applications. It builds a practical starting point for working with modern application data." },
+  { issuer: "MongoDB", title: "AI and Innovation", detail: "Explores how MongoDB supports resilient AI strategies through flexible data models, reliable application architecture, and a foundation that can adapt as intelligent products grow. The focus is on making AI systems dependable as their data and usage expand." },
+  { issuer: "MongoDB", title: "AI-Powered Search", detail: "Covers how vector search connects semantic embeddings with application data to build AI-powered discovery experiences that return more useful and context-aware results. The approach is useful for building search experiences that feel natural and relevant." },
+  { issuer: "MongoDB", title: "RAG Apps", detail: "Introduces the building blocks of RAG applications, from retrieving relevant context to grounding generated responses with MongoDB-backed knowledge and structured data. It helps connect retrieval, context, and generation into a more grounded user experience." },
+  { issuer: "MongoDB", title: "AI Agents", detail: "Explores the foundations of AI agents, including tool use, memory, retrieval, and the role of MongoDB in helping agents work with persistent application context. The ideas connect intelligent behavior with real application workflows." },
+  { issuer: "MathWorks", title: "MATLAB Onramp", detail: "Hands-on certification covering MATLAB basics, matrix operations, scripting, visualization, and scientific computing workflows for solving technical problems. The course emphasizes learning by building and testing solutions step by step." },
+  { issuer: "MATLAB", title: "Statistics Certification", detail: "Covers probability, statistical methods, data interpretation, and analytical reasoning fundamentals that support machine learning and scientific decision-making. These fundamentals support clearer reasoning from real-world datasets." },
+  { issuer: "MATLAB", title: "Linear Algebra", detail: "Covers vector spaces, matrices, linear transformations, and the mathematical structures that form a foundation for machine learning and engineering systems. The concepts provide a strong base for understanding technical models." },
+  { issuer: "CyberSecurity", title: "Cybersecurity Foundation", detail: "Introduces core cybersecurity principles, common digital risks, safe practices, and the responsible habits needed to protect systems and information. The training encourages careful, responsible behavior in digital environments." },
 ];
 
 function SectionLabel({ number, children }: { number: string; children: string }) {
@@ -119,7 +119,7 @@ export default function Home() {
 
         <section id="certifications" className="section certifications-section">
           <div className="section-aside reveal"><SectionLabel number="04">CERTIFICATIONS</SectionLabel><span className="aside-note">Proof of<br />curiosity.</span></div>
-          <div className="certifications-content reveal"><h2>Learning that<br /><span>keeps compounding.</span></h2><AccordionGallery items={certifications.map((cert) => ({ issuer: cert.issuer, label: cert.title, description: cert.detail }))} defaultIndex={0} accentColor="#ff6f37" overlayColor="#120b07" textColor="#fffaf4" height={520} expandRatio={0.56} radius={18} duration={0.82} /></div>
+          <div className="certifications-content reveal"><h2>Learning that<br /><span>keeps compounding.</span></h2><AccordionGallery items={certifications.map((cert) => ({ issuer: cert.issuer, label: cert.title, description: cert.detail }))} defaultIndex={0} accentColor="#ff6f37" overlayColor="#120b07" textColor="#fffaf4" height={380} expandRatio={0.56} radius={18} duration={0.82} /></div>
         </section>
 
         <section className="section journey-section">

@@ -112,3 +112,10 @@
 - [x] Center each certification heading and description within its card.
 - [x] Make the card description bold and long enough to read as a 3–4 line content block.
 - [x] Verify desktop/mobile layout and save a checkpoint.
+
+## Compact Certification Card Revision
+
+- [x] Reduce the gallery/card height to fit the centered text.
+- [x] Keep the heading and description vertically centered.
+- [x] Add 1–2 useful lines to each certification description.
+- [x] Verify desktop/mobile layout and save a checkpoint.

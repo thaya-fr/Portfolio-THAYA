@@ -117,15 +117,15 @@
 @media (max-width: 800px) {
   .accordion-gallery {
     flex-direction: column;
-    height: 700px !important;
-    min-height: 700px !important;
+    height: 560px !important;
+    min-height: 560px !important;
     perspective: none;
   }
   .ag-panel {
     flex: 1 1 0 !important;
     min-height: 58px;
   }
-  .ag-panel--active { flex: 4 1 0 !important; }
+  .ag-panel--active { flex: 4.6 1 0 !important; }
   .ag-panel__label { inset: 50% 14px auto; transform: translateY(calc(-50% + 10px)); }
   .ag-panel__bar { height: 3px; width: 42px; }
   .ag-panel__label strong { font-size: 19px; }
