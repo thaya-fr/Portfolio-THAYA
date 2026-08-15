@@ -185,3 +185,14 @@ footer { font-size: 12px; }
 .site-nav .wordmark-scroll-float { display: inline-block; font-size: inherit; line-height: 1; margin: 0; overflow: hidden; padding-bottom: .12em; vertical-align: middle; width: auto; }
 .site-nav .wordmark-scroll-float-text { display: inline-block; font-size: inherit; font-weight: inherit; letter-spacing: inherit; line-height: 1; text-align: left; white-space: nowrap; }
 .site-nav .wordmark-scroll-float .char { padding-bottom: .08em; }
+
+/* Latest Journey visual edit: 17px type with precise section inset. */
+.journey-section { padding-left: calc(clamp(24px, 8vw, 126px) + 4px); padding-right: calc(clamp(24px, 8vw, 126px) + 6px); }
+.journey-section .section-label,
+.journey-section .aside-note,
+.journey-section .journey-row > span,
+.journey-section .journey-row h3,
+.journey-section .journey-row p { font-size: 17px; }
+@media (max-width: 800px) {
+  .journey-section { padding-left: 24px; padding-right: 26px; }
+}

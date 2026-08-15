@@ -251,3 +251,9 @@
 - [x] Inspect the current wordmark and ScrollFloat integration points.
 - [x] Apply ScrollFloat only to THAYA. and keep navigation links unchanged.
 - [x] Verify desktop/mobile wordmark rendering and save a checkpoint.
+
+## Journey 17px Typography and Padding Verification
+
+- [x] Inspect the duplicated Journey 17px and padding style props.
+- [x] Preserve 17px typography with 6px right and 4px left padding through clean CSS.
+- [x] Verify desktop/mobile Journey rendering and save a checkpoint.
