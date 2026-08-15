@@ -144,3 +144,6 @@ footer { font-size: 12px; }
 
 /* Header navigation typography from the latest visual edit. */
 .nav-links button { font-size: 18px; }
+
+/* Explicit wordmark typography: THAYA. is intentionally larger than the navigation labels. */
+.site-nav .wordmark { font-size: 18px; }

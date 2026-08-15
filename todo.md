@@ -220,3 +220,9 @@
 - [x] Inspect the duplicated 18px header style props.
 - [x] Preserve the intended 18px navigation typography with clean markup.
 - [x] Verify desktop/mobile header rendering and save a checkpoint.
+
+## THAYA. Wordmark 18px Verification
+
+- [x] Inspect the wordmark typography cascade.
+- [x] Apply a specific 18px THAYA. wordmark rule.
+- [x] Verify desktop/mobile rendering and save a checkpoint.
