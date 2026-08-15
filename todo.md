@@ -105,3 +105,10 @@
 - [x] Remove image data and image rendering from certification panels.
 - [x] Style the panels around headings, descriptions, issuer accents, and numbered markers.
 - [x] Verify the no-image gallery on desktop/mobile and save a checkpoint.
+
+## Centered Certification Card Composition
+
+- [x] Remove the certification helper paragraph above the gallery.
+- [x] Center each certification heading and description within its card.
+- [x] Make the card description bold and long enough to read as a 3–4 line content block.
+- [x] Verify desktop/mobile layout and save a checkpoint.
