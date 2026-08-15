@@ -164,3 +164,9 @@
 - [x] Preserve the intended readable typography without malformed JSX.
 - [x] Make project images slightly smaller with clipped rounded edges like the certification cards.
 - [x] Verify desktop/mobile rendering and save a checkpoint.
+
+## Latest Typography Cleanup
+
+- [x] Remove duplicated inline style props introduced by the latest visual editor pass.
+- [x] Preserve the intended readable typography increases using clean CSS selectors.
+- [x] Verify desktop/mobile rendering and save a checkpoint.
