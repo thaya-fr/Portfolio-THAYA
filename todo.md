@@ -86,3 +86,10 @@
 - [x] Replace the sticky hover reset with a clean neutral state when the pointer leaves.
 - [x] Preserve keyboard and touch usability while refining pointer behavior.
 - [x] Verify desktop/mobile presentation and save a checkpoint.
+
+## Gallery Transition and Journey Copy Fix
+
+- [x] Replace sticky active hover with an explicit neutral state after pointer exit.
+- [x] Add clipped card edges and a smoother cross-card transition.
+- [x] Add spacing between EFX × SRIT, and strengthen the Journey supporting text size and weight.
+- [x] Verify desktop/mobile interaction and save a checkpoint.

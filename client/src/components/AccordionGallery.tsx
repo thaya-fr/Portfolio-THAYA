@@ -42,7 +42,7 @@ export default function AccordionGallery({
   const labelRefs = useRef<(HTMLDivElement | null)[]>([]);
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
   const leaveTimerRef = useRef<number | null>(null);
-  const [active, setActive] = useState(Math.min(Math.max(defaultIndex, 0), Math.max(items.length - 1, 0)));
+  const [active, setActive] = useState<number | null>(Math.min(Math.max(defaultIndex, 0), Math.max(items.length - 1, 0)));
   const reduceMotion = typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
 
   const applyLayout = useCallback((animate = true) => {
@@ -56,13 +56,13 @@ export default function AccordionGallery({
 
     panels.forEach((panel, index) => {
       if (!panel) return;
-      const isActive = index === active;
+      const isActive = active !== null && index === active;
       const media = mediaRefs.current[index];
       const label = labelRefs.current[index];
-      const tilt = isActive ? 0 : index < active ? 3 : -3;
+      const tilt = active === null ? 0 : isActive ? 0 : index < active ? 3 : -3;
       timeline.to(panel, { flexGrow: isActive ? grow : 1, rotateY: tilt, duration: durationValue, ease: "power3.out" }, 0);
-      if (media) timeline.to(media, { scale: isActive ? 1.03 : 1.12, xPercent: isActive ? -50 : index < active ? -56 : -44, filter: isActive ? "grayscale(0)" : "grayscale(.3)", duration: durationValue, ease: "power3.out" }, 0);
-      if (label) timeline.to(label, { opacity: isActive ? 1 : 0.14, y: isActive ? 0 : 8, duration: durationValue, ease: "power3.out" }, 0);
+      if (media) timeline.to(media, { scale: isActive ? 1.03 : 1.12, xPercent: isActive || active === null ? -50 : index < active ? -56 : -44, filter: isActive ? "grayscale(0)" : "grayscale(.3)", duration: durationValue, ease: "power3.out" }, 0);
+      if (label) timeline.to(label, { opacity: isActive ? 1 : 0, y: isActive ? 0 : 8, duration: durationValue, ease: "power3.inOut" }, 0);
     });
     timelineRef.current = timeline;
   }, [active, duration, expandRatio, items.length, reduceMotion]);
@@ -81,7 +81,7 @@ export default function AccordionGallery({
 
   const scheduleReset = () => {
     if (leaveTimerRef.current) window.clearTimeout(leaveTimerRef.current);
-    leaveTimerRef.current = window.setTimeout(() => setActive(defaultIndex), 140);
+    leaveTimerRef.current = window.setTimeout(() => setActive(null), 120);
   };
 
   return (
