@@ -177,3 +177,9 @@
 - [x] Check for CSS specificity or stale inline-style overrides.
 - [x] Apply the fix at the correct selector level and verify it visually.
 - [x] Save a checkpoint if code changes are required.
+
+## Latest Typography Pass Cleanup
+
+- [x] Remove the large set of inline font-size overrides introduced by the visual editor.
+- [x] Preserve intended typography through the editor-safe CSS layer.
+- [x] Verify desktop/mobile rendering and save a checkpoint.
