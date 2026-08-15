@@ -157,3 +157,10 @@
 - [x] Fix certification heading clearance so the “g” does not touch the cards.
 - [x] Move the certification aside note to the right, make it larger and bold, and fix its spacing.
 - [x] Verify desktop/mobile layout and save a checkpoint.
+
+## Visual Editor Cleanup and Project Image Revision
+
+- [x] Remove duplicated or invalid inline style props introduced by the visual editor.
+- [x] Preserve the intended readable typography without malformed JSX.
+- [x] Make project images slightly smaller with clipped rounded edges like the certification cards.
+- [x] Verify desktop/mobile rendering and save a checkpoint.

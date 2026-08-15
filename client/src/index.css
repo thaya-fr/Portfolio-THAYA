@@ -83,3 +83,18 @@ footer { font-size: 10px; }
   .certification-note { font-size: 17px; margin: 16px 0 20px; max-width: 100%; text-align: left; }
   .certifications-content > .accordion-gallery { margin-top: 8px; }
 }
+
+/* Signal Noir project visuals: inset the imagery slightly and clip the edges like the certification cards. */
+.project-visual { overflow: hidden; border-radius: 24px; padding: 12px; box-sizing: border-box; }
+.project-visual img { width: 100%; height: 100%; border-radius: 18px; object-fit: cover; display: block; }
+.project-visual .visual-wash { inset: 12px; border-radius: 18px; }
+.project-visual .project-number { top: 22px; right: 22px; }
+.project-visual .project-arrow { right: 22px; bottom: 22px; }
+@media (max-width: 800px) {
+  .project-visual { padding: 9px; border-radius: 20px; }
+  .project-visual img,
+  .project-visual .visual-wash { border-radius: 15px; }
+  .project-visual .visual-wash { inset: 9px; }
+  .project-visual .project-number { top: 17px; right: 17px; }
+  .project-visual .project-arrow { right: 17px; bottom: 17px; }
+}

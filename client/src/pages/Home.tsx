@@ -1,37 +1,13 @@
-// Signal Noir reminder: this page moves from cinematic intrigue to precise, readable proof of work.
+// Signal Noir reminder: cinematic visual language, bold readable type, and precise proof-of-work layouts.
 import { useEffect, useState } from "react";
 import { ArrowDownRight, ArrowUpRight, ExternalLink, Github, Mail, MapPin, Menu, X } from "lucide-react";
 import EvilEye from "@/components/EvilEye";
 import AccordionGallery from "@/components/AccordionGallery";
 
 const projects = [
-  {
-    number: "01",
-    title: "CrimeVision AI",
-    eyebrow: "AI / VISUAL ANALYTICS",
-    description: "An explainable AI command center prototype for the Karnataka State Police, visualizing crime hotspots, emerging trends, suspect networks, and risk assessments.",
-    tags: ["Explainable AI", "Data Viz", "Dashboard"],
-    href: "https://crimevision-ai-cqetlerx.onslate.in/",
-    image: "/manus-storage/crimevision-visual-v2_fe92ba8f.png",
-  },
-  {
-    number: "02",
-    title: "Smart Energy Monitoring",
-    eyebrow: "IOT / TELEMETRY",
-    description: "An end-to-end monitoring system combining ESP32 simulation, Thingspeak telemetry, PIR occupancy cutoffs, tariff calculation, and AI-assisted load optimization.",
-    tags: ["ESP32", "Thingspeak", "AI"],
-    href: "https://smart-energy-monitoring-nu.vercel.app/",
-    image: "/manus-storage/energy-visual-v2_7eb41aea.png",
-  },
-  {
-    number: "03",
-    title: "Smart Traffic Violation System",
-    eyebrow: "PHP / DATABASE SYSTEM",
-    description: "A centralized platform for managing drivers, vehicles, violations, and payments through a structured, responsive interface designed to reduce manual record keeping.",
-    tags: ["PHP", "MySQL", "Responsive UI"],
-    href: "https://smart-traffic-violation-system-xi.vercel.app/admin/login.php",
-    image: "/manus-storage/traffic-visual-v2_49a7515d.png",
-  },
+  { number: "01", title: "CrimeVision AI", eyebrow: "AI / VISUAL ANALYTICS", description: "An explainable AI command center prototype for the Karnataka State Police, visualizing crime hotspots, emerging trends, suspect networks, and risk assessments.", tags: ["Explainable AI", "Data Viz", "Dashboard"], href: "https://crimevision-ai-cqetlerx.onslate.in/", image: "/manus-storage/crimevision-visual-v2_fe92ba8f.png" },
+  { number: "02", title: "Smart Energy Monitoring", eyebrow: "IOT / TELEMETRY", description: "An end-to-end monitoring system combining ESP32 simulation, Thingspeak telemetry, PIR occupancy cutoffs, tariff calculation, and AI-assisted load optimization.", tags: ["ESP32", "Thingspeak", "AI"], href: "https://smart-energy-monitoring-nu.vercel.app/", image: "/manus-storage/energy-visual-v2_7eb41aea.png" },
+  { number: "03", title: "Smart Traffic Violation System", eyebrow: "PHP / DATABASE SYSTEM", description: "A centralized platform for managing drivers, vehicles, violations, and payments through a structured, responsive interface designed to reduce manual record keeping.", tags: ["PHP", "MySQL", "Responsive UI"], href: "https://smart-traffic-violation-system-xi.vercel.app/admin/login.php", image: "/manus-storage/traffic-visual-v2_49a7515d.png" },
 ];
 
 const skills = [
@@ -65,7 +41,8 @@ export default function Home() {
   useEffect(() => {
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const onMotion = () => setReducedMotion(motion.matches);
-    onMotion(); motion.addEventListener("change", onMotion);
+    onMotion();
+    motion.addEventListener("change", onMotion);
     const onScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener("scroll", onScroll, { passive: true });
     const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add("is-visible"); }), { threshold: 0.14 });
@@ -96,7 +73,6 @@ export default function Home() {
             <p className="hero-summary">I’m <span className="hero-name">R Thayananth</span>, a computer science student and frontend developer turning complex ideas into useful, interactive web experiences.</p>
             <div className="hero-actions"><button className="signal-button" onClick={() => scrollTo("work")}>Trace the work <ArrowDownRight size={17} /></button><a className="text-link" href="https://github.com/thaya-fr" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={15} /></a></div>
           </div>
-
           <div className="scroll-cue"><span>SCROLL TO EXPLORE</span><ArrowDownRight size={16} /></div>
         </section>
 
