@@ -323,3 +323,9 @@
 - [x] Inspect the mobile Journey row cascade.
 - [x] Separate 2024—NOW and HIGHLIGHTS labels from their content with consistent spacing.
 - [x] Verify the exact mobile layout, desktop regression, and save a checkpoint.
+
+## Desktop Journey Label Collision Fix
+
+- [x] Inspect the desktop Journey row structure and spacing.
+- [x] Separate the 2024—NOW/HIGHLIGHTS label column from the Journey content column.
+- [x] Verify wide and narrow layouts and save a checkpoint.

@@ -257,3 +257,12 @@ footer { font-size: 12px; }
   .journey-section .journey-row p { display: block; padding-left: 30px; }
   .journey-section .journey-row + .journey-row { margin-top: 34px; }
 }
+
+/* Desktop Journey repair: reserve a real label column and gap before each content block. */
+@media (min-width: 801px) {
+  .journey-section .journey-row { grid-template-columns: 170px minmax(0, 1fr); column-gap: 28px; align-items: start; }
+  .journey-section .journey-row > span { min-width: 0; padding-left: 30px; }
+  .journey-section .journey-row > div { min-width: 0; padding-left: 0; }
+  .journey-section .journey-row h3,
+  .journey-section .journey-row p { padding-left: 0; }
+}
