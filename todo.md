@@ -26,3 +26,11 @@
 - [x] Replace project imagery with topic-appropriate visuals.
 - [x] Update Journey wording and split the highlight text cleanly across lines.
 - [x] Verify desktop/mobile rendering and save a checkpoint.
+
+## Typography Refinement Revision
+
+- [x] Make the Journey and Toolkit labels visibly bolder.
+- [x] Match the Journey supporting text size to the Participated in SRM Hackathon heading.
+- [x] Make profile metadata labels bolder.
+- [x] Restyle the hero introduction with the display font, bold weight, and orange R Thayananth name.
+- [x] Verify desktop/mobile rendering and save a checkpoint.

@@ -79,7 +79,7 @@ export default function Home() {
           <div className="hero-copy reveal is-visible">
             <div className="eyebrow"><span className="pulse-dot" /> AVAILABLE FOR FRONTEND OPPORTUNITIES</div>
             <h1 id="hero-title">Interfaces for<br /><em>systems</em> that<br />deserve to be understood.</h1>
-            <p className="hero-summary">I’m R Thayananth, a computer science student and frontend developer turning complex ideas into useful, interactive web experiences.</p>
+            <p className="hero-summary">I’m <span className="hero-name">R Thayananth</span>, a computer science student and frontend developer turning complex ideas into useful, interactive web experiences.</p>
             <div className="hero-actions"><button className="signal-button" onClick={() => scrollTo("work")}>Trace the work <ArrowDownRight size={17} /></button><a className="text-link" href="https://github.com/thaya-fr" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={15} /></a></div>
           </div>
 
