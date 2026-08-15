@@ -59,3 +59,9 @@
 - [x] Add a Certifications navigation link and section between Toolkit and Journey.
 - [x] Style the section for grouped issuer/topic scanning on desktop and mobile.
 - [x] Verify the section and save a new checkpoint.
+
+## Certification Card Styling Revision
+
+- [x] Make all certification issuer labels bolder.
+- [x] Apply the first featured card’s orange-shaded treatment to every certification card.
+- [x] Verify desktop/mobile presentation and save a checkpoint.
