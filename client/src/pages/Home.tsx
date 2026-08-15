@@ -1,5 +1,5 @@
 // Signal Noir reminder: cinematic visual language, bold readable type, and precise proof-of-work layouts.
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { ArrowDownRight, ArrowUpRight, ExternalLink, Github, Mail, MapPin, Menu, X } from "lucide-react";
 import EvilEye from "@/components/EvilEye";
 import AccordionGallery from "@/components/AccordionGallery";
@@ -22,7 +22,7 @@ const certifications = [
   { issuer: "MATLAB", title: "Linear Algebra", detail: "Covers vector spaces, matrices, linear transformations, and the mathematical structures that form a foundation for machine learning and engineering systems. The concepts provide a strong base for understanding technical models." },
   { issuer: "CyberSecurity", title: "Cybersecurity Foundation", detail: "Introduces core cybersecurity principles, common digital risks, safe practices, and the responsible habits needed to protect systems and information. The training encourages careful, responsible behavior in digital environments." },
 ];
-function SectionLabel({ number, children }: { number: string; children: string }) { return <div className="section-label"><span>{number}</span><i />{children}</div>; }
+function SectionLabel({ number, children, style }: { number: string; children: string; style?: CSSProperties }) { return <div className="section-label" style={style}><span>{number}</span><i />{children}</div>; }
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false); const [menuOpen, setMenuOpen] = useState(false); const [reducedMotion, setReducedMotion] = useState(false);

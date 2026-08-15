@@ -202,3 +202,9 @@
 - [x] Confirm the latest 17px Profile typography edit is present.
 - [x] Remove duplicated inline styles while preserving the intended visible size.
 - [x] Verify desktop/mobile Profile layout and save a checkpoint.
+
+## Typography Visibility Diagnosis
+
+- [x] Inspect the latest visual-editor edit and the active CSS selectors.
+- [x] Identify and fix any specificity, inline-style, or malformed-markup conflict.
+- [x] Verify the change visibly on desktop/mobile and save a checkpoint.
