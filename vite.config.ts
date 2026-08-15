@@ -219,6 +219,19 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("/node_modules/")) {
+            if (id.includes("/react/") || id.includes("/react-dom/") || id.includes("/wouter/")) return "vendor-react";
+            if (id.includes("/gsap/") || id.includes("/ogl/")) return "vendor-animation";
+            if (id.includes("/lucide-react/")) return "vendor-icons";
+          }
+          if (id.includes("/client/src/components/")) return "portfolio-components";
+          if (id.includes("/client/src/pages/")) return "portfolio-pages";
+        },
+      },
+    },
   },
   server: {
     port: 3000,
