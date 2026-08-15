@@ -233,3 +233,9 @@
 - [x] Implement the exact ScrollFloat component and CSS.
 - [x] Apply it to the intended portfolio headings without changing animation parameters.
 - [x] Verify scrolling, responsiveness, build health, and save a checkpoint.
+
+## ScrollFloat Line Break Corrections
+
+- [x] Inspect the current project title and contact ScrollFloat text.
+- [x] Apply the requested two-line breaks without changing ScrollFloat animation settings.
+- [x] Verify desktop/mobile layout and save a checkpoint.

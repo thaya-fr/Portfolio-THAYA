@@ -33,7 +33,7 @@ const ScrollFloat = ({
 
   const splitText = useMemo(() => {
     const text = typeof children === "string" ? children : "";
-    return text.split("").map((char, index) => (
+    return text.split("").map((char, index) => char === "\n" ? <br key={`break-${index}`} /> : (
       <span className="char" key={index}>{char === " " ? "\u00A0" : char}</span>
     ));
   }, [children]);
