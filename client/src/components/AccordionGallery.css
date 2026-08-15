@@ -117,8 +117,8 @@
 @media (max-width: 800px) {
   .accordion-gallery {
     flex-direction: column;
-    height: 560px !important;
-    min-height: 560px !important;
+    height: 440px !important;
+    min-height: 440px !important;
     perspective: none;
   }
   .ag-panel {

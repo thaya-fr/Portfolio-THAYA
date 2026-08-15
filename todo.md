@@ -119,3 +119,9 @@
 - [x] Keep the heading and description vertically centered.
 - [x] Add 1–2 useful lines to each certification description.
 - [x] Verify desktop/mobile layout and save a checkpoint.
+
+## Individual Certification Card Size
+
+- [x] Reduce the individual card dimensions without changing the overall gallery stage.
+- [x] Preserve centered heading and description readability inside the active card.
+- [x] Verify desktop/mobile sizing and save a checkpoint.

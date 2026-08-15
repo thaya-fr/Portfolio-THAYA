@@ -119,7 +119,7 @@ export default function Home() {
 
         <section id="certifications" className="section certifications-section">
           <div className="section-aside reveal"><SectionLabel number="04">CERTIFICATIONS</SectionLabel><span className="aside-note">Proof of<br />curiosity.</span></div>
-          <div className="certifications-content reveal"><h2>Learning that<br /><span>keeps compounding.</span></h2><AccordionGallery items={certifications.map((cert) => ({ issuer: cert.issuer, label: cert.title, description: cert.detail }))} defaultIndex={0} accentColor="#ff6f37" overlayColor="#120b07" textColor="#fffaf4" height={380} expandRatio={0.56} radius={18} duration={0.82} /></div>
+          <div className="certifications-content reveal"><h2>Learning that<br /><span>keeps compounding.</span></h2><AccordionGallery items={certifications.map((cert) => ({ issuer: cert.issuer, label: cert.title, description: cert.detail }))} defaultIndex={0} accentColor="#ff6f37" overlayColor="#120b07" textColor="#fffaf4" height={300} expandRatio={0.56} radius={18} duration={0.82} /></div>
         </section>
 
         <section className="section journey-section">
