@@ -131,3 +131,9 @@
 - [x] Remove the lower-entry offset from the active caption animation.
 - [x] Center the full issuer, heading, and description block within the card.
 - [x] Verify desktop/mobile alignment and save a checkpoint.
+
+## Certification Card Gradient Revision
+
+- [x] Create a bright-orange top, warm shaded middle, and near-black bottom card gradient.
+- [x] Preserve centered content contrast and hover behavior.
+- [x] Verify desktop/mobile cards and save a checkpoint.

@@ -16,7 +16,7 @@
 
 .ag-panel {
   align-items: stretch;
-  background: linear-gradient(155deg, rgba(255, 111, 55, 0.2), rgba(18, 16, 14, 0.96));
+  background: linear-gradient(180deg, #ff6f37 0%, #a94725 22%, #3a1e16 56%, #050505 100%);
   border: 1px solid rgba(255, 111, 55, 0.64);
   border-radius: var(--ag-radius);
   clip-path: inset(0 round var(--ag-radius));
@@ -43,7 +43,7 @@
 .ag-panel:hover,
 .ag-panel:focus-visible,
 .ag-panel--active {
-  background: linear-gradient(155deg, rgba(255, 111, 55, 0.46), rgba(33, 20, 14, 0.98));
+  background: linear-gradient(180deg, #ff7b43 0%, #bd4f2c 23%, #4a2418 55%, #050505 100%);
   border-color: var(--ag-accent);
   box-shadow: 0 20px 48px -26px rgba(255, 111, 55, 0.86);
   outline: none;
