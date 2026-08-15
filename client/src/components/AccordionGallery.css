@@ -1,0 +1,82 @@
+/* Signal Noir AccordionGallery: interactive certification cards with orange intelligence-system accents. */
+.accordion-gallery {
+  --ag-accent: #ff6f37;
+  --ag-overlay: #120b07;
+  --ag-text: #fffaf4;
+  --ag-gap: 10px;
+  --ag-radius: 3px;
+  display: flex;
+  gap: var(--ag-gap);
+  max-width: 100%;
+  perspective: 1200px;
+  perspective-origin: center;
+}
+
+.ag-panel {
+  background: #18100c;
+  border: 1px solid rgba(255, 111, 55, 0.38);
+  border-radius: var(--ag-radius);
+  cursor: pointer;
+  display: block;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transform-style: preserve-3d;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+  will-change: flex-grow, transform;
+}
+
+.ag-panel:hover,
+.ag-panel:focus-visible,
+.ag-panel--active {
+  border-color: var(--ag-accent);
+  box-shadow: 0 18px 42px -24px rgba(255, 111, 55, 0.75);
+  outline: none;
+}
+
+.ag-panel__frame,
+.ag-panel__media,
+.ag-panel__overlay {
+  inset: 0;
+  position: absolute;
+}
+
+.ag-panel__frame { overflow: hidden; }
+.ag-panel__media { left: 50%; width: 116%; will-change: transform, filter; }
+.ag-panel__media img { display: block; height: 100%; object-fit: cover; user-select: none; width: 100%; }
+.ag-panel__overlay { background: linear-gradient(180deg, rgba(18, 11, 7, 0.04) 18%, rgba(18, 11, 7, 0.94) 100%), rgba(18, 11, 7, 0.2); pointer-events: none; }
+
+.ag-panel__label {
+  align-items: flex-start;
+  bottom: 22px;
+  color: var(--ag-text);
+  display: flex;
+  gap: 11px;
+  left: 20px;
+  opacity: 0;
+  position: absolute;
+  right: 16px;
+  transform: translateY(8px);
+  z-index: 2;
+}
+
+.ag-panel__bar { background: var(--ag-accent); box-shadow: 0 0 14px rgba(255, 111, 55, 0.8); flex: 0 0 3px; height: 42px; margin-top: 2px; }
+.ag-panel__label strong { display: block; font-family: "Space Grotesk", sans-serif; font-size: clamp(16px, 1.6vw, 24px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; }
+.ag-panel__label p { color: rgba(255, 250, 244, 0.8); font-size: 11px; font-weight: 600; line-height: 1.45; margin: 8px 0 0; max-width: 420px; }
+.ag-panel__index { color: rgba(255, 250, 244, 0.7); font-family: "Space Grotesk", sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 0.15em; position: absolute; right: 14px; top: 14px; }
+
+@media (max-width: 800px) {
+  .accordion-gallery { flex-direction: column; height: 700px !important; perspective: none; }
+  .ag-panel { flex: 1 1 0 !important; min-height: 70px; }
+  .ag-panel--active { flex: 4 1 0 !important; }
+  .ag-panel__media { height: 116%; left: 50%; top: 50%; width: 100%; }
+  .ag-panel__label { bottom: 16px; left: 16px; }
+  .ag-panel__label strong { font-size: 17px; }
+  .ag-panel__label p { font-size: 10px; max-width: 260px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ag-panel, .ag-panel__media, .ag-panel__label { transition: none; will-change: auto; }
+}

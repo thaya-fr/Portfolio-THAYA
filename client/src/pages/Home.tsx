@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { ArrowDownRight, ArrowUpRight, ExternalLink, Github, Mail, MapPin, Menu, X } from "lucide-react";
 import EvilEye from "@/components/EvilEye";
+import AccordionGallery from "@/components/AccordionGallery";
 
 const projects = [
   {
@@ -40,16 +41,12 @@ const skills = [
 ];
 
 const certifications = [
-  { issuer: "SRM Institute", title: "SRM Chennai Hackathon", detail: "Recognized as part of the Top 50 teams for innovative problem-solving and presentation.", featured: true },
-  { issuer: "MongoDB", title: "MongoDB Basics for Students" },
-  { issuer: "MongoDB", title: "AI and Innovation: How MongoDB Enables a Resilient AI Strategy" },
-  { issuer: "MongoDB", title: "Building AI-Powered Search with MongoDB Vector Search" },
-  { issuer: "MongoDB", title: "Building RAG Apps Using MongoDB" },
-  { issuer: "MongoDB", title: "Building AI Agents with MongoDB" },
-  { issuer: "MathWorks", title: "MATLAB Onramp", detail: "MATLAB basics, matrix operations, and scientific computing workflows." },
-  { issuer: "MATLAB", title: "Statistics Certification", detail: "Statistical methods, probability, and data analysis fundamentals." },
-  { issuer: "MATLAB", title: "Linear Algebra", detail: "Vector spaces, matrices, and transformations foundational to ML and engineering." },
-  { issuer: "CyberSecurity", title: "Cybersecurity Foundation Certification" },
+  { issuer: "SRM Institute", title: "SRM Chennai Hackathon", detail: "Top 50 recognition for innovative problem-solving and presentation.", image: "/manus-storage/crimevision-visual-v2_fe92ba8f.png" },
+  { issuer: "MongoDB", title: "MongoDB Learning Path", detail: "Basics, resilient AI strategy, vector search, RAG apps, and AI agents.", image: "/manus-storage/energy-visual-v2_7eb41aea.png" },
+  { issuer: "MathWorks", title: "MATLAB Onramp", detail: "MATLAB basics, matrix operations, and scientific computing workflows.", image: "/manus-storage/traffic-visual-v2_49a7515d.png" },
+  { issuer: "MATLAB", title: "Statistics Certification", detail: "Statistical methods, probability, and data analysis fundamentals.", image: "/manus-storage/crimevision-visual-v2_fe92ba8f.png" },
+  { issuer: "MATLAB", title: "Linear Algebra", detail: "Vector spaces, matrices, and transformations for ML and engineering.", image: "/manus-storage/energy-visual-v2_7eb41aea.png" },
+  { issuer: "CyberSecurity", title: "Cybersecurity Foundation", detail: "Foundational concepts for safer digital systems and responsible practice.", image: "/manus-storage/traffic-visual-v2_49a7515d.png" },
 ];
 
 function SectionLabel({ number, children }: { number: string; children: string }) {
@@ -118,7 +115,7 @@ export default function Home() {
 
         <section id="certifications" className="section certifications-section">
           <div className="section-aside reveal"><SectionLabel number="04">CERTIFICATIONS</SectionLabel><span className="aside-note">Proof of<br />curiosity.</span></div>
-          <div className="certifications-content reveal"><h2>Learning that<br /><span>keeps compounding.</span></h2><div className="certification-list">{certifications.map((cert) => <article className={`certification-card ${cert.featured ? "is-featured" : ""}`} key={`${cert.issuer}-${cert.title}`}><div className="certification-topline"><span>{cert.issuer}</span><span>↗</span></div><h3>{cert.title}</h3>{cert.detail && <p>{cert.detail}</p>}</article>)}</div></div>
+          <div className="certifications-content reveal"><h2>Learning that<br /><span>keeps compounding.</span></h2><p className="certifications-intro">Hover, tap, or use the arrow keys to move through the credentials behind the signal.</p><AccordionGallery items={certifications.map((cert) => ({ image: cert.image, label: `${cert.issuer} · ${cert.title}`, description: cert.detail, alt: `${cert.issuer} certification panel` }))} defaultIndex={0} accentColor="#ff6f37" overlayColor="#120b07" textColor="#fffaf4" height={430} expandRatio={0.48} /></div>
         </section>
 
         <section className="section journey-section">

@@ -65,3 +65,10 @@
 - [x] Make all certification issuer labels bolder.
 - [x] Apply the first featured card’s orange-shaded treatment to every certification card.
 - [x] Verify desktop/mobile presentation and save a checkpoint.
+
+## Certification AccordionGallery Revision
+
+- [x] Add the GSAP dependency required by AccordionGallery.
+- [x] Create the reusable AccordionGallery component and CSS.
+- [x] Replace the simple certification grid with the interactive gallery.
+- [x] Verify desktop/mobile behavior and save a checkpoint.
