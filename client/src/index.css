@@ -247,3 +247,13 @@ footer { font-size: 12px; }
   .journey-section .journey-row h3,
   .journey-section .journey-row p { padding-left: 30px; }
 }
+
+/* Mobile Journey repair: force each label onto its own row before the associated text. */
+@media (max-width: 800px) {
+  .journey-section .journey-row { display: block !important; padding-left: 0; }
+  .journey-section .journey-row > span { display: block !important; width: 100%; margin-bottom: 16px; padding-left: 30px; }
+  .journey-section .journey-row > div { display: block !important; margin-left: 0; padding-left: 0; }
+  .journey-section .journey-row h3,
+  .journey-section .journey-row p { display: block; padding-left: 30px; }
+  .journey-section .journey-row + .journey-row { margin-top: 34px; }
+}

@@ -317,3 +317,9 @@
 - [x] Inspect the current Journey padding cascade.
 - [x] Apply 30px left padding only to 2024—NOW, HIGHLIGHTS, and their text blocks.
 - [x] Verify responsive Journey layout and save a checkpoint.
+
+## Mobile Journey Label Overlap Fix
+
+- [x] Inspect the mobile Journey row cascade.
+- [x] Separate 2024—NOW and HIGHLIGHTS labels from their content with consistent spacing.
+- [x] Verify the exact mobile layout, desktop regression, and save a checkpoint.
