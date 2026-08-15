@@ -147,3 +147,19 @@ footer { font-size: 12px; }
 
 /* Explicit wordmark typography: THAYA. is intentionally larger than the navigation labels. */
 .site-nav .wordmark { font-size: 18px; }
+
+/* ScrollFloat integration styling only; GSAP timing and transform values remain exactly as supplied. */
+.hero-scroll-float { color: #fffaf4; font-family: "Space Grotesk", sans-serif; font-size: clamp(50px, 6.4vw, 96px); font-weight: 700; letter-spacing: -.08em; line-height: .94; margin: 30px 0; max-width: 800px; text-align: left; }
+.hero-scroll-float-text { font-size: inherit; font-weight: inherit; line-height: inherit; text-align: left; }
+.section-scroll-float { color: #fffaf4; font-family: "Space Grotesk", sans-serif; font-size: clamp(38px, 5.3vw, 76px); font-weight: 700; letter-spacing: -.07em; line-height: .98; margin-top: 28px; text-align: left; text-shadow: 0 2px 18px rgba(0,0,0,.7); }
+.section-scroll-float .scroll-float-text { font-size: inherit; font-weight: inherit; line-height: inherit; text-align: inherit; }
+.project-scroll-float { color: var(--paper); font-family: "Space Grotesk", sans-serif; font-size: clamp(28px, 3vw, 43px); font-weight: 450; letter-spacing: -.06em; line-height: 1; margin: 17px 0; text-align: left; }
+.project-scroll-float .scroll-float-text { font-size: inherit; font-weight: inherit; line-height: inherit; text-align: inherit; }
+.contact-scroll-float { color: #170b06; font-family: "Space Grotesk", sans-serif; font-size: clamp(52px, 9vw, 140px); font-weight: 500; letter-spacing: -.09em; line-height: .87; margin: 105px 0 20px; text-align: left; }
+.contact-scroll-float .scroll-float-text { font-size: inherit; font-weight: inherit; line-height: inherit; text-align: inherit; }
+@media (max-width: 800px) {
+  .hero-scroll-float { font-size: clamp(50px, 14vw, 78px); }
+  .section-scroll-float { font-size: clamp(38px, 11vw, 60px); }
+  .project-scroll-float { font-size: clamp(28px, 8vw, 38px); }
+  .contact-scroll-float { font-size: clamp(52px, 15vw, 100px); margin-top: 95px; }
+}

@@ -226,3 +226,10 @@
 - [x] Inspect the wordmark typography cascade.
 - [x] Apply a specific 18px THAYA. wordmark rule.
 - [x] Verify desktop/mobile rendering and save a checkpoint.
+
+## Exact ScrollFloat Integration
+
+- [x] Inspect the supplied ScrollFloat source and current project setup.
+- [x] Implement the exact ScrollFloat component and CSS.
+- [x] Apply it to the intended portfolio headings without changing animation parameters.
+- [x] Verify scrolling, responsiveness, build health, and save a checkpoint.
