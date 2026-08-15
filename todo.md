@@ -39,3 +39,10 @@
 
 - [x] Make the Selected Work description paragraph bold.
 - [x] Verify the section and save a new checkpoint.
+
+## Small Type Scale Revision
+
+- [x] Increase the Journey aside label slightly.
+- [x] Increase the Toolkit aside label slightly.
+- [x] Increase both contact links slightly.
+- [x] Verify the updated type scale and save a checkpoint.
