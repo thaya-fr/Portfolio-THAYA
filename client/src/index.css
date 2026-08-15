@@ -71,3 +71,15 @@ h1, h2, h3, p { margin: 0; } h1, h2, h3 { font-family: "Space Grotesk", sans-ser
 .contact-eye { font-size: 11px; }
 .contact-links a { font-size: 14px; }
 footer { font-size: 10px; }
+
+/* Signal Noir certification alignment: keep the heading clear of the cards and place the supporting note on the right. */
+.section-label { font-size: 12px; }
+.aside-note { font-size: 15px; }
+.certifications-content { padding-top: 10px; }
+.certifications-content h2 { margin-bottom: 0; }
+.certification-note { color: var(--paper); font-size: 20px; font-weight: 800; line-height: 1.25; margin: 20px 0 24px auto; max-width: 360px; text-align: right; }
+.certifications-content > .accordion-gallery { margin-top: 12px; }
+@media (max-width: 800px) {
+  .certification-note { font-size: 17px; margin: 16px 0 20px; max-width: 100%; text-align: left; }
+  .certifications-content > .accordion-gallery { margin-top: 8px; }
+}

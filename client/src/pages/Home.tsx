@@ -118,8 +118,8 @@ export default function Home() {
         </section>
 
         <section id="certifications" className="section certifications-section">
-          <div className="section-aside reveal"><SectionLabel number="04">CERTIFICATIONS</SectionLabel><span className="aside-note">Proof of<br />curiosity.</span></div>
-          <div className="certifications-content reveal"><h2>Learning that<br /><span>keeps compounding.</span></h2><AccordionGallery items={certifications.map((cert) => ({ issuer: cert.issuer, label: cert.title, description: cert.detail }))} defaultIndex={0} accentColor="#ff6f37" overlayColor="#120b07" textColor="#fffaf4" height={300} expandRatio={0.56} radius={18} duration={0.82} /></div>
+          <div className="section-aside reveal"><SectionLabel number="04">CERTIFICATIONS</SectionLabel></div>
+          <div className="certifications-content reveal"><h2>Learning that<br /><span>keeps compounding.</span></h2><p className="certification-note">Proof of curiosity.</p><AccordionGallery items={certifications.map((cert) => ({ issuer: cert.issuer, label: cert.title, description: cert.detail }))} defaultIndex={0} accentColor="#ff6f37" overlayColor="#120b07" textColor="#fffaf4" height={300} expandRatio={0.56} radius={18} duration={0.82} /></div>
         </section>
 
         <section className="section journey-section">
@@ -130,7 +130,7 @@ export default function Home() {
         <section id="contact" className="contact-section"><div className="contact-eye"><span className="mini-eye">◒</span><span>06 / OPEN CHANNEL</span></div><h2>Have a problem<br />worth <em>solving?</em></h2><p>Let’s turn it into a useful interface.</p><div className="contact-actions"><a className="contact-button" href="mailto:thayananthraghuraman02@gmail.com">Email app <Mail size={17} /></a><a className="contact-button gmail-button" href="https://mail.google.com/mail/?view=cm&fs=1&to=thayananthraghuraman02@gmail.com" target="_blank" rel="noreferrer">Open Gmail <ArrowUpRight size={17} /></a></div><div className="contact-links"><a href="mailto:thayananthraghuraman02@gmail.com">thayananthraghuraman02@gmail.com</a><a href="https://github.com/thaya-fr" target="_blank" rel="noreferrer"><Github size={15} /> github.com/thaya-fr</a></div></section>
       </main>
 
-      <footer><span>R THAYANANTH · FRONTEND DEVELOPER</span><span>© 2026 / SIGNAL NOIR</span></footer>
+      <footer><span>R THAYANANTH · FRONTEND DEVELOPER</span><span>© 2026 / ALL RIGHTS RESERVED</span></footer>
     </div>
   );
 }

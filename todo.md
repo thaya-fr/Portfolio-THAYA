@@ -149,3 +149,11 @@
 - [x] Slightly increase typography in the affected hero and supporting content areas.
 - [x] Slightly increase project links, Journey, Contact, and Footer text where targeted.
 - [x] Verify desktop/mobile hierarchy and save a checkpoint.
+
+## Latest Portfolio Alignment Revision
+
+- [x] Confirm footer copyright wording as ALL RIGHTS RESERVED.
+- [x] Increase the remaining targeted supporting typography slightly.
+- [x] Fix certification heading clearance so the “g” does not touch the cards.
+- [x] Move the certification aside note to the right, make it larger and bold, and fix its spacing.
+- [x] Verify desktop/mobile layout and save a checkpoint.
