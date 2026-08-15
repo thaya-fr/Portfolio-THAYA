@@ -293,3 +293,9 @@
 - [x] Inspect the current glare transition timing.
 - [x] Slow the glare sweep to a smoother duration without changing card behavior.
 - [x] Verify desktop/mobile certification cards and save a checkpoint.
+
+## Certification Glare 1350ms Refinement
+
+- [x] Inspect the current glare timing.
+- [x] Set the glare transition to exactly 1350ms.
+- [x] Verify the certification cards and save a checkpoint.

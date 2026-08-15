@@ -161,7 +161,7 @@
   inset: 0;
   pointer-events: none;
   position: absolute;
-  transition: background-position 1200ms cubic-bezier(.23,1,.32,1);
+  transition: background-position 1350ms cubic-bezier(.23,1,.32,1);
   z-index: 1;
 }
 .ag-panel:hover::before,
