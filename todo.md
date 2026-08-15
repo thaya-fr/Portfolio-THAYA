@@ -214,3 +214,9 @@
 - [x] Inspect the duplicated header style props.
 - [x] Preserve the intended 13px navigation typography with clean markup.
 - [x] Verify desktop/mobile header rendering and save a checkpoint.
+
+## Header 18px Typography Verification
+
+- [x] Inspect the duplicated 18px header style props.
+- [x] Preserve the intended 18px navigation typography with clean markup.
+- [x] Verify desktop/mobile header rendering and save a checkpoint.
