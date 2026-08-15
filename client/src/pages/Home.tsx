@@ -11,7 +11,7 @@ const projects = [
     description: "An explainable AI command center prototype for the Karnataka State Police, visualizing crime hotspots, emerging trends, suspect networks, and risk assessments.",
     tags: ["Explainable AI", "Data Viz", "Dashboard"],
     href: "https://crimevision-ai-cqetlerx.onslate.in/",
-    image: "/manus-storage/crimevision-visual_34d036e4.png",
+    image: "/manus-storage/crimevision-visual-v2_fe92ba8f.png",
   },
   {
     number: "02",
@@ -20,7 +20,7 @@ const projects = [
     description: "An end-to-end monitoring system combining ESP32 simulation, Thingspeak telemetry, PIR occupancy cutoffs, tariff calculation, and AI-assisted load optimization.",
     tags: ["ESP32", "Thingspeak", "AI"],
     href: "https://smart-energy-monitoring-nu.vercel.app/",
-    image: "/manus-storage/energy-visual_52018054.png",
+    image: "/manus-storage/energy-visual-v2_7eb41aea.png",
   },
   {
     number: "03",
@@ -29,7 +29,7 @@ const projects = [
     description: "A centralized platform for managing drivers, vehicles, violations, and payments through a structured, responsive interface designed to reduce manual record keeping.",
     tags: ["PHP", "MySQL", "Responsive UI"],
     href: "https://smart-traffic-violation-system-xi.vercel.app/admin/login.php",
-    image: "/manus-storage/traffic-visual_7d3ba82f.png",
+    image: "/manus-storage/traffic-visual-v2_49a7515d.png",
   },
 ];
 
@@ -69,7 +69,7 @@ export default function Home() {
       <header className={`site-nav ${scrolled ? "is-scrolled" : ""}`}>
         <button className="wordmark" onClick={() => scrollTo("top")} aria-label="Return to top"><span className="wordmark-mark">◒</span>THAYA<span className="wordmark-dot">.</span></button>
         <nav className={menuOpen ? "nav-links is-open" : "nav-links"} aria-label="Primary navigation">
-          <button onClick={() => scrollTo("work")}>Work</button><button onClick={() => scrollTo("profile")}>Profile</button><button onClick={() => scrollTo("toolkit")}>Toolkit</button><button onClick={() => scrollTo("contact")}>Contact</button>
+          <button onClick={() => scrollTo("profile")}>Profile</button><button onClick={() => scrollTo("work")}>Work</button><button onClick={() => scrollTo("toolkit")}>Toolkit</button><button onClick={() => scrollTo("contact")}>Contact</button>
         </nav>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close menu" : "Open menu"}>{menuOpen ? <X size={21} /> : <Menu size={21} />}</button>
       </header>
@@ -82,7 +82,7 @@ export default function Home() {
             <p className="hero-summary">I’m R Thayananth, a computer science student and frontend developer turning complex ideas into useful, interactive web experiences.</p>
             <div className="hero-actions"><button className="signal-button" onClick={() => scrollTo("work")}>Trace the work <ArrowDownRight size={17} /></button><a className="text-link" href="https://github.com/thaya-fr" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={15} /></a></div>
           </div>
-          <div className="hero-art reveal is-visible"><div className="orbital-ring ring-one" /><div className="orbital-ring ring-two" /><div className="hero-coordinate">09° 59′ N<br />77° 28′ E</div><div className="hero-caption">01 / SIGNAL DETECTED<br /><span>FULL-PAGE VISUAL SYSTEM</span></div></div>
+
           <div className="scroll-cue"><span>SCROLL TO EXPLORE</span><ArrowDownRight size={16} /></div>
         </section>
 
@@ -90,7 +90,7 @@ export default function Home() {
 
         <section id="profile" className="section profile-section">
           <div className="section-aside reveal"><SectionLabel number="01">PROFILE</SectionLabel><span className="aside-note">A builder with a<br />curious eye.</span></div>
-          <div className="profile-content reveal"><h2>I turn complex ideas into <span>clear, interactive</span> web experiences.</h2><p>Currently pursuing my second year of B.E. Computer Science and Engineering at Sri Ramakrishna Institute of Technology, I enjoy connecting thoughtful frontend design with practical backend systems.</p><div className="profile-facts"><div><small>BASED IN</small><strong><MapPin size={14} /> Theni, Tamil Nadu</strong></div><div><small>FOCUS</small><strong>Frontend development</strong></div><div><small>LANGUAGES</small><strong>Tamil · English · Hindi</strong></div></div></div>
+          <div className="profile-content reveal"><h2>I turn complex ideas into <span>clear, interactive</span> web experiences.</h2><p>Currently pursuing my second year of B.E. Computer Science and Engineering at Sri Ramakrishna Institute of Technology, I enjoy connecting thoughtful frontend design with practical backend systems.</p><div className="profile-facts"><div><small>LOCATION</small><strong><MapPin size={14} /> Theni, Tamil Nadu</strong></div><div><small>FOCUS</small><strong>Frontend development</strong></div><div><small>LANGUAGES</small><strong>Tamil · English · Hindi</strong></div></div></div>
         </section>
 
         <section id="work" className="section work-section">
@@ -105,7 +105,7 @@ export default function Home() {
 
         <section className="section journey-section">
           <div className="section-aside reveal"><SectionLabel number="04">JOURNEY</SectionLabel><span className="aside-note">Curiosity in<br />motion.</span></div>
-          <div className="journey-content reveal"><div className="journey-row"><span>2024—NOW</span><div><h3>B.E. Computer Science & Engineering</h3><p>Sri Ramakrishna Institute of Technology</p></div></div><div className="journey-row"><span>HIGHLIGHTS</span><div><h3>Hackathons, security, and new interfaces.</h3><p>StudAI One Foundry Hackathon · Web Security CTF Workshop · EFX × SRIT Vibe-Coded Websites Event</p></div></div></div>
+          <div className="journey-content reveal"><div className="journey-row"><span>2024—NOW</span><div><h3>B.E. Computer Science & Engineering</h3><p>Sri Ramakrishna Institute of Technology</p></div></div><div className="journey-row"><span>HIGHLIGHTS</span><div><h3>Participated in SRM Hackathon</h3><p>StudAI One Foundry Hackathon · Web Security CTF Workshop<br />EFX × SRIT Vibe-Coded Websites Event</p></div></div></div>
         </section>
 
         <section id="contact" className="contact-section"><div className="contact-eye"><span className="mini-eye">◒</span><span>05 / OPEN CHANNEL</span></div><h2>Have a problem<br />worth <em>solving?</em></h2><p>Let’s turn it into a useful interface.</p><a className="contact-button" href="mailto:thayananthraghuraman02@gmail.com">Start a conversation <Mail size={17} /></a><div className="contact-links"><a href="mailto:thayananthraghuraman02@gmail.com">thayananthraghuraman02@gmail.com</a><a href="https://github.com/thaya-fr" target="_blank" rel="noreferrer"><Github size={15} /> github.com/thaya-fr</a></div></section>

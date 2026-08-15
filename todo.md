@@ -17,3 +17,12 @@
 - [x] Locate the orange outline in the current hero markup and styles.
 - [x] Remove only the unintended outline while preserving the approved orange signal accents.
 - [x] Verify the corrected hero and save a checkpoint.
+
+## Latest Visual Editor Revisions
+
+- [x] Reorder navigation to Profile before Work and move the requested hero copy placement.
+- [x] Remove the requested hero annotation and update location/metadata labels.
+- [x] Strengthen the requested bold text and increase the requested font sizes.
+- [x] Replace project imagery with topic-appropriate visuals.
+- [x] Update Journey wording and split the highlight text cleanly across lines.
+- [x] Verify desktop/mobile rendering and save a checkpoint.
