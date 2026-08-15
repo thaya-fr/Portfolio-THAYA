@@ -46,3 +46,9 @@
 - [x] Increase the Toolkit aside label slightly.
 - [x] Increase both contact links slightly.
 - [x] Verify the updated type scale and save a checkpoint.
+
+## Dual Contact Options
+
+- [x] Keep the existing mailto contact action.
+- [x] Add a direct Gmail compose action beside it.
+- [x] Verify both contact options visually and save a checkpoint.
