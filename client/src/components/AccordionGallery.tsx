@@ -41,6 +41,7 @@ export default function AccordionGallery({
   const mediaRefs = useRef<(HTMLDivElement | null)[]>([]);
   const labelRefs = useRef<(HTMLDivElement | null)[]>([]);
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
+  const leaveTimerRef = useRef<number | null>(null);
   const [active, setActive] = useState(Math.min(Math.max(defaultIndex, 0), Math.max(items.length - 1, 0)));
   const reduceMotion = typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
 
@@ -70,10 +71,18 @@ export default function AccordionGallery({
     const resize = () => applyLayout(false);
     applyLayout(false);
     window.addEventListener("resize", resize);
-    return () => { window.removeEventListener("resize", resize); timelineRef.current?.kill(); };
+    return () => { window.removeEventListener("resize", resize); timelineRef.current?.kill(); if (leaveTimerRef.current) window.clearTimeout(leaveTimerRef.current); };
   }, [applyLayout]);
 
-  const selectPanel = (index: number) => setActive(index);
+  const selectPanel = (index: number) => {
+    if (leaveTimerRef.current) window.clearTimeout(leaveTimerRef.current);
+    setActive(index);
+  };
+
+  const scheduleReset = () => {
+    if (leaveTimerRef.current) window.clearTimeout(leaveTimerRef.current);
+    leaveTimerRef.current = window.setTimeout(() => setActive(defaultIndex), 140);
+  };
 
   return (
     <div
@@ -82,7 +91,7 @@ export default function AccordionGallery({
       style={{ "--ag-accent": accentColor, "--ag-overlay": overlayColor, "--ag-text": textColor, "--ag-gap": `${gap}px`, "--ag-radius": `${radius}px`, height: `${height}px` } as CSSProperties}
       role="list"
       aria-label="Certifications gallery"
-      onMouseLeave={() => selectPanel(defaultIndex)}
+      onMouseLeave={scheduleReset}
     >
       {items.map((item, index) => {
         const isActive = active === index;
@@ -95,6 +104,7 @@ export default function AccordionGallery({
             tabIndex={0}
             aria-label={item.label}
             onMouseEnter={() => trigger === "hover" && selectPanel(index)}
+            onMouseLeave={scheduleReset}
             onFocus={() => selectPanel(index)}
             onClick={() => selectPanel(index)}
             onKeyDown={(event) => {

@@ -79,3 +79,10 @@
 - [x] Smooth panel transitions and reduce abrupt hover changes.
 - [x] Reset the active panel when the pointer leaves the gallery.
 - [x] Verify desktop/mobile interaction and save a checkpoint.
+
+## Full-Width Certification Gallery Revision
+
+- [x] Make the AccordionGallery occupy the full certification content width with larger, more substantial panels.
+- [x] Replace the sticky hover reset with a clean neutral state when the pointer leaves.
+- [x] Preserve keyboard and touch usability while refining pointer behavior.
+- [x] Verify desktop/mobile presentation and save a checkpoint.

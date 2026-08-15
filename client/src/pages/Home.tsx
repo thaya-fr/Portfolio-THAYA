@@ -119,7 +119,7 @@ export default function Home() {
 
         <section id="certifications" className="section certifications-section">
           <div className="section-aside reveal"><SectionLabel number="04">CERTIFICATIONS</SectionLabel><span className="aside-note">Proof of<br />curiosity.</span></div>
-          <div className="certifications-content reveal"><h2>Learning that<br /><span>keeps compounding.</span></h2><p className="certifications-intro">Hover, tap, or use the arrow keys to move through the credentials behind the signal.</p><AccordionGallery items={certifications.map((cert) => ({ image: cert.image, label: `${cert.issuer} · ${cert.title}`, description: cert.detail, alt: `${cert.issuer} certification panel` }))} defaultIndex={0} accentColor="#ff6f37" overlayColor="#120b07" textColor="#fffaf4" height={430} expandRatio={0.48} /></div>
+          <div className="certifications-content reveal"><h2>Learning that<br /><span>keeps compounding.</span></h2><p className="certifications-intro">Hover, tap, or use the arrow keys to move through the credentials behind the signal.</p><AccordionGallery items={certifications.map((cert) => ({ image: cert.image, label: `${cert.issuer} · ${cert.title}`, description: cert.detail, alt: `${cert.issuer} certification panel` }))} defaultIndex={0} accentColor="#ff6f37" overlayColor="#120b07" textColor="#fffaf4" height={520} expandRatio={0.56} /></div>
         </section>
 
         <section className="section journey-section">
