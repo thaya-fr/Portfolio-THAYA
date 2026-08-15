@@ -200,3 +200,20 @@ footer { font-size: 12px; }
 /* Contact links: separate the personal email and direct Gmail route into distinct rows. */
 .contact-links { align-items: flex-start; display: flex; flex-direction: column; gap: 12px; }
 .contact-links a { display: inline-flex; width: fit-content; }
+
+/* Mobile Contact correction: contain the animated heading and keep controls/links in normal flow. */
+@media (max-width: 800px) {
+  .contact-section { min-height: 820px; overflow: visible; padding-bottom: 150px; }
+  .contact-scroll-float { display: block; max-width: 100%; overflow: visible; font-size: clamp(45px, 14vw, 70px); line-height: .94; margin: 72px 0 28px; }
+  .contact-scroll-float .scroll-float-text { display: block !important; max-width: 100%; overflow: visible; white-space: normal; }
+  .contact-scroll-float .scroll-float-mobile { width: 100%; }
+  .contact-actions { gap: 12px; margin-top: 28px; position: relative; z-index: 2; }
+  .contact-actions .contact-button { min-height: 52px; }
+  .contact-links { bottom: auto; gap: 12px; left: auto; margin-top: 28px; position: static; right: auto; }
+  .contact-links a { max-width: 100%; overflow-wrap: anywhere; }
+}
+
+@media (max-width: 800px) {
+  .contact-scroll-float .scroll-float-desktop { display: none !important; }
+  .contact-scroll-float .scroll-float-mobile { display: block !important; }
+}

@@ -275,3 +275,9 @@
 - [x] Inspect the current Contact ScrollFloat, AccordionGallery viewport, and Contact link layout.
 - [x] Add mobile-only Contact heading breaks, expose all 10 certification cards through scrolling, and separate the email links.
 - [x] Verify desktop/mobile behavior and save a checkpoint.
+
+## Mobile Contact Clipping and Overlap Fix
+
+- [x] Inspect the mobile Contact controls and ScrollFloat clipping rules.
+- [x] Separate the Gmail/email controls and contain the three-line Contact heading on mobile.
+- [x] Verify the exact mobile viewport, desktop regression, and save a checkpoint.
