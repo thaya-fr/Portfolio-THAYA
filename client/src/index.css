@@ -229,3 +229,9 @@ footer { font-size: 12px; }
   .journey-section .journey-row h3,
   .journey-section .journey-row p { font-size: 22px; }
 }
+
+/* Latest Journey visual edit: use a clean 30px left inset. */
+.journey-section { padding-left: 30px; }
+@media (max-width: 800px) {
+  .journey-section { padding-left: 30px; }
+}

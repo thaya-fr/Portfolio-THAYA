@@ -305,3 +305,9 @@
 - [x] Inspect the duplicated Journey 22px and invalid padding style props.
 - [x] Preserve 22px heading/body text, 20px labels, and valid Journey spacing through clean CSS.
 - [x] Verify desktop/mobile Journey rendering and save a checkpoint.
+
+## Journey 30px Padding Verification
+
+- [x] Inspect the duplicated Journey padding style props.
+- [x] Preserve 30px left padding through clean scoped CSS.
+- [x] Verify desktop/mobile Journey rendering and save a checkpoint.
