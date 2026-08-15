@@ -134,3 +134,7 @@ footer { font-size: 12px; }
   .journey-row p { font-size: 17px; }
   .contact-links a { font-size: 14px; }
 }
+
+/* Focused hero-name type adjustment from the latest visual edit. */
+.hero-name { font-size: 24px; }
+@media (max-width: 800px) { .hero-name { font-size: 22px; } }

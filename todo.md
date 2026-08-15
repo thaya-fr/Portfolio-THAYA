@@ -190,3 +190,9 @@
 - [x] Check for stale visual-editor overrides or CSS specificity conflicts.
 - [x] Apply the typography fix reliably and verify it visually.
 - [x] Save a checkpoint after confirmation.
+
+## 24px Hero Typography Verification
+
+- [x] Confirm the latest 24px hero typography edit is present.
+- [x] Remove duplicated inline styles while preserving the intended visible size.
+- [x] Verify desktop/mobile hero layout and save a checkpoint.
