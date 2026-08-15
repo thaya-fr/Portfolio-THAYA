@@ -16,6 +16,7 @@ type ScrollFloatProps = {
   scrollStart?: string;
   scrollEnd?: string;
   stagger?: number;
+  as?: "h2" | "span";
 };
 
 const ScrollFloat = ({
@@ -28,8 +29,9 @@ const ScrollFloat = ({
   scrollStart = "center bottom+=50%",
   scrollEnd = "bottom bottom-=40%",
   stagger = 0.03,
+  as = "h2",
 }: ScrollFloatProps) => {
-  const containerRef = useRef<HTMLHeadingElement>(null);
+  const containerRef = useRef<any>(null);
 
   const splitText = useMemo(() => {
     const text = typeof children === "string" ? children : "";
@@ -78,10 +80,11 @@ const ScrollFloat = ({
     };
   }, [scrollContainerRef, animationDuration, ease, scrollStart, scrollEnd, stagger]);
 
+  const Tag = as;
   return (
-    <h2 ref={containerRef} className={`scroll-float ${containerClassName}`.trim()}>
+    <Tag ref={containerRef} className={`scroll-float ${containerClassName}`.trim()}>
       <span className={`scroll-float-text ${textClassName}`.trim()}>{splitText}</span>
-    </h2>
+    </Tag>
   );
 };
 
