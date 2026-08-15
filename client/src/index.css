@@ -138,20 +138,3 @@ footer { font-size: 12px; }
 /* Focused hero-name type adjustment from the latest visual edit. */
 .hero-name { font-size: 24px; }
 @media (max-width: 800px) { .hero-name { font-size: 22px; } }
-
-/* WarpText signal transitions: canvas replaces only the requested phrases while preserving layout, contrast, and touch-friendly sizing. */
-.hero-warp-heading { margin: 30px 0; }
-.hero-warp { min-height: clamp(250px, 39vw, 500px); }
-.hero-name { display: inline-block; vertical-align: middle; }
-.hero-name .inline-warp-name { display: inline-block; min-height: 1.15em; vertical-align: middle; width: 180px; }
-.warp-section-heading { min-height: 1.95em; }
-.warp-project-heading { min-height: 1.05em; margin: 17px 0; }
-.warp-contact-heading { min-height: 1.8em; }
-@media (max-width: 800px) {
-  .hero-warp-heading { margin: 30px 0; }
-  .hero-warp { min-height: 225px; }
-  .hero-name .inline-warp-name { width: 155px; }
-  .warp-section-heading { min-height: 1.9em; }
-  .warp-project-heading { margin: 14px 0; }
-  .warp-contact-heading { min-height: 1.7em; }
-}

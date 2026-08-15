@@ -208,9 +208,3 @@
 - [x] Inspect the latest visual-editor edit and the active CSS selectors.
 - [x] Identify and fix any specificity, inline-style, or malformed-markup conflict.
 - [x] Verify the change visibly on desktop/mobile and save a checkpoint.
-
-## WarpText Signal Transition Integration
-
-- [x] Add reusable WarpText WebGL component and styles.
-- [x] Apply the effect to the requested hero, profile, work, project, toolkit, certification, and contact phrases.
-- [x] Verify text fitting, accessibility fallback, reduced motion, desktop/mobile rendering, and production build.

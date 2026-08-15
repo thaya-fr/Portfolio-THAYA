@@ -1,5 +1,0 @@
-/* Signal Noir reminder: keep the warped canvas cinematic, compact, and readable against the Evil Eye background. */
-.warp-text { display: block; min-height: 1.05em; overflow: hidden; position: relative; width: 100%; }
-.warp-text canvas { display: block; height: 100%; inset: 0; position: absolute; width: 100%; }
-.warp-text-fallback { border: 0; clip: rect(0 0 0 0); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; white-space: nowrap; width: 1px; }
-@media (prefers-reduced-motion: reduce) { .warp-text canvas { opacity: .9; } }
