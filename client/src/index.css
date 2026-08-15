@@ -196,3 +196,7 @@ footer { font-size: 12px; }
 @media (max-width: 800px) {
   .journey-section { padding-left: 24px; padding-right: 26px; }
 }
+
+/* Contact links: separate the personal email and direct Gmail route into distinct rows. */
+.contact-links { align-items: flex-start; display: flex; flex-direction: column; gap: 12px; }
+.contact-links a { display: inline-flex; width: fit-content; }

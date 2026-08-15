@@ -269,3 +269,9 @@
 - [x] Inspect the current glitch intensity rules.
 - [x] Intensify RGB separation, scan-band displacement, and glitch burst timing.
 - [x] Verify desktop/mobile wordmark rendering and save a checkpoint.
+
+## Contact, Certification, and Mobile ScrollFloat Fixes
+
+- [x] Inspect the current Contact ScrollFloat, AccordionGallery viewport, and Contact link layout.
+- [x] Add mobile-only Contact heading breaks, expose all 10 certification cards through scrolling, and separate the email links.
+- [x] Verify desktop/mobile behavior and save a checkpoint.

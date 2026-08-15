@@ -17,6 +17,7 @@ type ScrollFloatProps = {
   scrollEnd?: string;
   stagger?: number;
   as?: "h2" | "span";
+  mobileText?: string;
 };
 
 const ScrollFloat = ({
@@ -30,15 +31,14 @@ const ScrollFloat = ({
   scrollEnd = "bottom bottom-=40%",
   stagger = 0.03,
   as = "h2",
+  mobileText,
 }: ScrollFloatProps) => {
   const containerRef = useRef<any>(null);
 
-  const splitText = useMemo(() => {
-    const text = typeof children === "string" ? children : "";
-    return text.split("").map((char, index) => char === "\n" ? <br key={`break-${index}`} /> : (
-      <span className="char" key={index}>{char === " " ? "\u00A0" : char}</span>
-    ));
-  }, [children]);
+  const renderText = useMemo(() => (text: string) => text.split("").map((char, index) => char === "\n" ? <br key={`break-${index}`} /> : (
+    <span className="char" key={index}>{char === " " ? "\u00A0" : char}</span>
+  )), []);
+  const desktopText = typeof children === "string" ? children : "";
 
   useEffect(() => {
     const el = containerRef.current;
@@ -83,7 +83,8 @@ const ScrollFloat = ({
   const Tag = as;
   return (
     <Tag ref={containerRef} className={`scroll-float ${containerClassName}`.trim()}>
-      <span className={`scroll-float-text ${textClassName}`.trim()}>{splitText}</span>
+      <span className={`scroll-float-text scroll-float-desktop ${textClassName}`.trim()}>{renderText(desktopText)}</span>
+      {mobileText && <span className={`scroll-float-text scroll-float-mobile ${textClassName}`.trim()}>{renderText(mobileText)}</span>}
     </Tag>
   );
 };

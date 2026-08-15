@@ -138,3 +138,15 @@
 @media (prefers-reduced-motion: reduce) {
   .ag-panel, .ag-panel__label { transition: none; will-change: auto; }
 }
+
+/* Mobile certification scroll-through: keep every panel in document flow instead of clipping after six cards. */
+@media (max-width: 800px) {
+  .accordion-gallery {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none;
+    overflow: visible;
+  }
+  .ag-panel { flex: 0 0 58px !important; min-height: 58px; }
+  .ag-panel--active { flex: 0 0 300px !important; min-height: 300px; }
+}
