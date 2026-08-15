@@ -42,11 +42,15 @@ const skills = [
 
 const certifications = [
   { issuer: "SRM Institute", title: "SRM Chennai Hackathon", detail: "Top 50 recognition for innovative problem-solving and presentation.", image: "/manus-storage/crimevision-visual-v2_fe92ba8f.png" },
-  { issuer: "MongoDB", title: "MongoDB Learning Path", detail: "Basics, resilient AI strategy, vector search, RAG apps, and AI agents.", image: "/manus-storage/energy-visual-v2_7eb41aea.png" },
-  { issuer: "MathWorks", title: "MATLAB Onramp", detail: "MATLAB basics, matrix operations, and scientific computing workflows.", image: "/manus-storage/traffic-visual-v2_49a7515d.png" },
-  { issuer: "MATLAB", title: "Statistics Certification", detail: "Statistical methods, probability, and data analysis fundamentals.", image: "/manus-storage/crimevision-visual-v2_fe92ba8f.png" },
-  { issuer: "MATLAB", title: "Linear Algebra", detail: "Vector spaces, matrices, and transformations for ML and engineering.", image: "/manus-storage/energy-visual-v2_7eb41aea.png" },
-  { issuer: "CyberSecurity", title: "Cybersecurity Foundation", detail: "Foundational concepts for safer digital systems and responsible practice.", image: "/manus-storage/traffic-visual-v2_49a7515d.png" },
+  { issuer: "MongoDB", title: "MongoDB Basics for Students", detail: "Foundational MongoDB concepts for student developers.", image: "/manus-storage/energy-visual-v2_7eb41aea.png" },
+  { issuer: "MongoDB", title: "AI and Innovation", detail: "How MongoDB enables a resilient AI strategy.", image: "/manus-storage/traffic-visual-v2_49a7515d.png" },
+  { issuer: "MongoDB", title: "AI-Powered Search", detail: "Building AI-powered search with MongoDB Vector Search.", image: "/manus-storage/crimevision-visual-v2_fe92ba8f.png" },
+  { issuer: "MongoDB", title: "RAG Apps", detail: "Building retrieval-augmented generation applications using MongoDB.", image: "/manus-storage/energy-visual-v2_7eb41aea.png" },
+  { issuer: "MongoDB", title: "AI Agents", detail: "Building AI agents with MongoDB.", image: "/manus-storage/traffic-visual-v2_49a7515d.png" },
+  { issuer: "MathWorks", title: "MATLAB Onramp", detail: "MATLAB basics, matrix operations, and scientific computing workflows.", image: "/manus-storage/crimevision-visual-v2_fe92ba8f.png" },
+  { issuer: "MATLAB", title: "Statistics Certification", detail: "Statistical methods, probability, and data analysis fundamentals.", image: "/manus-storage/energy-visual-v2_7eb41aea.png" },
+  { issuer: "MATLAB", title: "Linear Algebra", detail: "Vector spaces, matrices, and transformations for ML and engineering.", image: "/manus-storage/traffic-visual-v2_49a7515d.png" },
+  { issuer: "CyberSecurity", title: "Cybersecurity Foundation", detail: "Foundational concepts for safer digital systems and responsible practice.", image: "/manus-storage/crimevision-visual-v2_fe92ba8f.png" },
 ];
 
 function SectionLabel({ number, children }: { number: string; children: string }) {

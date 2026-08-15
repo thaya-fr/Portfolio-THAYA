@@ -72,3 +72,10 @@
 - [x] Create the reusable AccordionGallery component and CSS.
 - [x] Replace the simple certification grid with the interactive gallery.
 - [x] Verify desktop/mobile behavior and save a checkpoint.
+
+## AccordionGallery Interaction Fix
+
+- [x] Restore every individual supplied certification as a gallery panel.
+- [x] Smooth panel transitions and reduce abrupt hover changes.
+- [x] Reset the active panel when the pointer leaves the gallery.
+- [x] Verify desktop/mobile interaction and save a checkpoint.

@@ -82,6 +82,7 @@ export default function AccordionGallery({
       style={{ "--ag-accent": accentColor, "--ag-overlay": overlayColor, "--ag-text": textColor, "--ag-gap": `${gap}px`, "--ag-radius": `${radius}px`, height: `${height}px` } as CSSProperties}
       role="list"
       aria-label="Certifications gallery"
+      onMouseLeave={() => selectPanel(defaultIndex)}
     >
       {items.map((item, index) => {
         const isActive = active === index;
