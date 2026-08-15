@@ -1,4 +1,4 @@
-/* THAYA. wordmark glitch: layered signal offsets, clipped scan bands, and reduced-motion fallback. */
+/* THAYA. wordmark glitch: stronger signal offsets, scan bands, and reduced-motion fallback. */
 .glitch-text { display: inline-block; isolation: isolate; position: relative; }
 .glitch-text::before,
 .glitch-text::after,
@@ -9,23 +9,25 @@
 .glitch-text::after { color: #ff3d71; mix-blend-mode: screen; transform: translate(0); z-index: -1; }
 .glitch-text-visible { position: relative; z-index: 1; }
 @keyframes thaya-glitch-cyan {
-  0%, 82%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
-  84% { clip-path: inset(12% 0 66% 0); transform: translate(-2px, 1px); }
-  86% { clip-path: inset(58% 0 18% 0); transform: translate(2px, -1px); }
-  88% { clip-path: inset(34% 0 44% 0); transform: translate(-1px, 0); }
+  0%, 70%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+  72% { clip-path: inset(8% 0 72% 0); transform: translate(-5px, 2px); }
+  74% { clip-path: inset(52% 0 18% 0); transform: translate(5px, -2px); }
+  76% { clip-path: inset(28% 0 48% 0); transform: translate(-4px, 1px); }
+  78% { clip-path: inset(76% 0 4% 0); transform: translate(3px, -1px); }
 }
 @keyframes thaya-glitch-pink {
-  0%, 82%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
-  85% { clip-path: inset(68% 0 10% 0); transform: translate(2px, 0); }
-  87% { clip-path: inset(18% 0 60% 0); transform: translate(-2px, 1px); }
-  89% { clip-path: inset(45% 0 32% 0); transform: translate(1px, -1px); }
+  0%, 68%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+  70% { clip-path: inset(64% 0 8% 0); transform: translate(5px, 1px); }
+  72% { clip-path: inset(14% 0 64% 0); transform: translate(-5px, 2px); }
+  74% { clip-path: inset(42% 0 34% 0); transform: translate(4px, -2px); }
+  76% { clip-path: inset(82% 0 2% 0); transform: translate(-3px, 1px); }
 }
-.glitch-text::before { animation: thaya-glitch-cyan 3.6s steps(1, end) infinite; }
-.glitch-text::after { animation: thaya-glitch-pink 3.6s steps(1, end) -.14s infinite; }
+.glitch-text::before { animation: thaya-glitch-cyan 2.2s steps(1, end) infinite; }
+.glitch-text::after { animation: thaya-glitch-pink 2.2s steps(1, end) -.22s infinite; }
 .site-nav .glitch-text { letter-spacing: inherit; }
 .site-nav .glitch-text-visible { font: inherit; letter-spacing: inherit; }
-.site-nav .glitch-text:hover::before { transform: translate(-3px, 0); }
-.site-nav .glitch-text:hover::after { transform: translate(3px, 0); }
+.site-nav .glitch-text:hover::before { transform: translate(-6px, 1px); }
+.site-nav .glitch-text:hover::after { transform: translate(6px, -1px); }
 @media (prefers-reduced-motion: reduce) {
   .glitch-text::before, .glitch-text::after { animation: none; }
 }

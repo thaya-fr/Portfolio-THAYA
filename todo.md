@@ -263,3 +263,9 @@
 - [x] Inspect the current THAYA. wordmark implementation.
 - [x] Replace the scroll-only treatment with a dedicated glitch animation on THAYA. only.
 - [x] Verify desktop/mobile wordmark rendering and save a checkpoint.
+
+## THAYA. Glitch Intensity Enhancement
+
+- [x] Inspect the current glitch intensity rules.
+- [x] Intensify RGB separation, scan-band displacement, and glitch burst timing.
+- [x] Verify desktop/mobile wordmark rendering and save a checkpoint.
