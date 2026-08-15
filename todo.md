@@ -52,3 +52,10 @@
 - [x] Keep the existing mailto contact action.
 - [x] Add a direct Gmail compose action beside it.
 - [x] Verify both contact options visually and save a checkpoint.
+
+## Certifications Section
+
+- [x] Add the supplied certifications and SRM hackathon recognition to structured portfolio content.
+- [x] Add a Certifications navigation link and section between Toolkit and Journey.
+- [x] Style the section for grouped issuer/topic scanning on desktop and mobile.
+- [x] Verify the section and save a new checkpoint.

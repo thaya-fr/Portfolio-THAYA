@@ -39,6 +39,19 @@ const skills = [
   ["Data & tools", "Supabase", "PostgreSQL", "Git & GitHub", "VS Code", "XAMPP"],
 ];
 
+const certifications = [
+  { issuer: "SRM Institute", title: "SRM Chennai Hackathon", detail: "Recognized as part of the Top 50 teams for innovative problem-solving and presentation.", featured: true },
+  { issuer: "MongoDB", title: "MongoDB Basics for Students" },
+  { issuer: "MongoDB", title: "AI and Innovation: How MongoDB Enables a Resilient AI Strategy" },
+  { issuer: "MongoDB", title: "Building AI-Powered Search with MongoDB Vector Search" },
+  { issuer: "MongoDB", title: "Building RAG Apps Using MongoDB" },
+  { issuer: "MongoDB", title: "Building AI Agents with MongoDB" },
+  { issuer: "MathWorks", title: "MATLAB Onramp", detail: "MATLAB basics, matrix operations, and scientific computing workflows." },
+  { issuer: "MATLAB", title: "Statistics Certification", detail: "Statistical methods, probability, and data analysis fundamentals." },
+  { issuer: "MATLAB", title: "Linear Algebra", detail: "Vector spaces, matrices, and transformations foundational to ML and engineering." },
+  { issuer: "CyberSecurity", title: "Cybersecurity Foundation Certification" },
+];
+
 function SectionLabel({ number, children }: { number: string; children: string }) {
   return <div className="section-label"><span>{number}</span><i />{children}</div>;
 }
@@ -69,7 +82,7 @@ export default function Home() {
       <header className={`site-nav ${scrolled ? "is-scrolled" : ""}`}>
         <button className="wordmark" onClick={() => scrollTo("top")} aria-label="Return to top"><span className="wordmark-mark">◒</span>THAYA<span className="wordmark-dot">.</span></button>
         <nav className={menuOpen ? "nav-links is-open" : "nav-links"} aria-label="Primary navigation">
-          <button onClick={() => scrollTo("profile")}>Profile</button><button onClick={() => scrollTo("work")}>Work</button><button onClick={() => scrollTo("toolkit")}>Toolkit</button><button onClick={() => scrollTo("contact")}>Contact</button>
+          <button onClick={() => scrollTo("profile")}>Profile</button><button onClick={() => scrollTo("work")}>Work</button><button onClick={() => scrollTo("toolkit")}>Toolkit</button><button onClick={() => scrollTo("certifications")}>Certifications</button><button onClick={() => scrollTo("contact")}>Contact</button>
         </nav>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close menu" : "Open menu"}>{menuOpen ? <X size={21} /> : <Menu size={21} />}</button>
       </header>
@@ -103,12 +116,17 @@ export default function Home() {
           <div className="toolkit-content reveal"><h2>A practical stack,<br /><span>always learning.</span></h2><div className="skills-grid">{skills.map(([label, ...items]) => <div className="skill-group" key={label}><small>{label}</small>{items.map((item) => <div className="skill-item" key={item}>{item}<span>↗</span></div>)}</div>)}</div></div>
         </section>
 
+        <section id="certifications" className="section certifications-section">
+          <div className="section-aside reveal"><SectionLabel number="04">CERTIFICATIONS</SectionLabel><span className="aside-note">Proof of<br />curiosity.</span></div>
+          <div className="certifications-content reveal"><h2>Learning that<br /><span>keeps compounding.</span></h2><div className="certification-list">{certifications.map((cert) => <article className={`certification-card ${cert.featured ? "is-featured" : ""}`} key={`${cert.issuer}-${cert.title}`}><div className="certification-topline"><span>{cert.issuer}</span><span>↗</span></div><h3>{cert.title}</h3>{cert.detail && <p>{cert.detail}</p>}</article>)}</div></div>
+        </section>
+
         <section className="section journey-section">
-          <div className="section-aside reveal"><SectionLabel number="04">JOURNEY</SectionLabel><span className="aside-note">Curiosity in<br />motion.</span></div>
+          <div className="section-aside reveal"><SectionLabel number="05">JOURNEY</SectionLabel><span className="aside-note">Curiosity in<br />motion.</span></div>
           <div className="journey-content reveal"><div className="journey-row"><span>2024—NOW</span><div><h3>B.E. Computer Science & Engineering</h3><p>Sri Ramakrishna Institute of Technology</p></div></div><div className="journey-row"><span>HIGHLIGHTS</span><div><h3>Participated in SRM Hackathon</h3><p>StudAI One Foundry Hackathon · Web Security CTF Workshop<br />EFX × SRIT Vibe-Coded Websites Event</p></div></div></div>
         </section>
 
-        <section id="contact" className="contact-section"><div className="contact-eye"><span className="mini-eye">◒</span><span>05 / OPEN CHANNEL</span></div><h2>Have a problem<br />worth <em>solving?</em></h2><p>Let’s turn it into a useful interface.</p><div className="contact-actions"><a className="contact-button" href="mailto:thayananthraghuraman02@gmail.com">Email app <Mail size={17} /></a><a className="contact-button gmail-button" href="https://mail.google.com/mail/?view=cm&fs=1&to=thayananthraghuraman02@gmail.com" target="_blank" rel="noreferrer">Open Gmail <ArrowUpRight size={17} /></a></div><div className="contact-links"><a href="mailto:thayananthraghuraman02@gmail.com">thayananthraghuraman02@gmail.com</a><a href="https://github.com/thaya-fr" target="_blank" rel="noreferrer"><Github size={15} /> github.com/thaya-fr</a></div></section>
+        <section id="contact" className="contact-section"><div className="contact-eye"><span className="mini-eye">◒</span><span>06 / OPEN CHANNEL</span></div><h2>Have a problem<br />worth <em>solving?</em></h2><p>Let’s turn it into a useful interface.</p><div className="contact-actions"><a className="contact-button" href="mailto:thayananthraghuraman02@gmail.com">Email app <Mail size={17} /></a><a className="contact-button gmail-button" href="https://mail.google.com/mail/?view=cm&fs=1&to=thayananthraghuraman02@gmail.com" target="_blank" rel="noreferrer">Open Gmail <ArrowUpRight size={17} /></a></div><div className="contact-links"><a href="mailto:thayananthraghuraman02@gmail.com">thayananthraghuraman02@gmail.com</a><a href="https://github.com/thaya-fr" target="_blank" rel="noreferrer"><Github size={15} /> github.com/thaya-fr</a></div></section>
       </main>
 
       <footer><span>R THAYANANTH · FRONTEND DEVELOPER</span><span>© 2026 / SIGNAL NOIR</span></footer>
