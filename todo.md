@@ -311,3 +311,9 @@
 - [x] Inspect the duplicated Journey padding style props.
 - [x] Preserve 30px left padding through clean scoped CSS.
 - [x] Verify desktop/mobile Journey rendering and save a checkpoint.
+
+## Targeted Journey Timeline Padding
+
+- [x] Inspect the current Journey padding cascade.
+- [x] Apply 30px left padding only to 2024—NOW, HIGHLIGHTS, and their text blocks.
+- [x] Verify responsive Journey layout and save a checkpoint.

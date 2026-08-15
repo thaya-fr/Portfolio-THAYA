@@ -235,3 +235,15 @@ footer { font-size: 12px; }
 @media (max-width: 800px) {
   .journey-section { padding-left: 30px; }
 }
+
+/* Targeted Journey edit: section alignment stays intact; timeline labels and copy receive the 30px inset. */
+.journey-section { padding-left: calc(clamp(24px, 8vw, 126px) + 4px); }
+.journey-section .journey-row > span,
+.journey-section .journey-row h3,
+.journey-section .journey-row p { padding-left: 30px; }
+@media (max-width: 800px) {
+  .journey-section { padding-left: 24px; }
+  .journey-section .journey-row > span,
+  .journey-section .journey-row h3,
+  .journey-section .journey-row p { padding-left: 30px; }
+}
