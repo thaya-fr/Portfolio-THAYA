@@ -11,3 +11,9 @@
 - [x] Add a darker text-safe scrim over the Evil Eye behind copy-heavy areas.
 - [x] Improve intro paragraph contrast and add a subtle text shadow where needed.
 - [x] Verify desktop and mobile readability, then save a revised checkpoint.
+
+## Orange Outline Verification
+
+- [x] Locate the orange outline in the current hero markup and styles.
+- [x] Remove only the unintended outline while preserving the approved orange signal accents.
+- [x] Verify the corrected hero and save a checkpoint.
