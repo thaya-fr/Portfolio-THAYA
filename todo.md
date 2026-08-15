@@ -281,3 +281,9 @@
 - [x] Inspect the mobile Contact controls and ScrollFloat clipping rules.
 - [x] Separate the Gmail/email controls and contain the three-line Contact heading on mobile.
 - [x] Verify the exact mobile viewport, desktop regression, and save a checkpoint.
+
+## Certification Card Glare Reveal
+
+- [x] Inspect the certification gallery and supplied glare behavior.
+- [x] Add an active-card glare reveal without changing the gallery’s existing interaction model.
+- [x] Verify desktop/mobile card reveals and save a checkpoint.
