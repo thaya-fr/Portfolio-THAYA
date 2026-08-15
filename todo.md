@@ -34,3 +34,8 @@
 - [x] Make profile metadata labels bolder.
 - [x] Restyle the hero introduction with the display font, bold weight, and orange R Thayananth name.
 - [x] Verify desktop/mobile rendering and save a checkpoint.
+
+## Selected Work Paragraph Revision
+
+- [x] Make the Selected Work description paragraph bold.
+- [x] Verify the section and save a new checkpoint.
