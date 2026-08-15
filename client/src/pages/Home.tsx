@@ -1,25 +1,115 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+// Signal Noir reminder: this page moves from cinematic intrigue to precise, readable proof of work.
+import { useEffect, useState } from "react";
+import { ArrowDownRight, ArrowUpRight, ExternalLink, Github, Mail, MapPin, Menu, X } from "lucide-react";
+import EvilEye from "@/components/EvilEye";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
+const projects = [
+  {
+    number: "01",
+    title: "CrimeVision AI",
+    eyebrow: "AI / VISUAL ANALYTICS",
+    description: "An explainable AI command center prototype for the Karnataka State Police, visualizing crime hotspots, emerging trends, suspect networks, and risk assessments.",
+    tags: ["Explainable AI", "Data Viz", "Dashboard"],
+    href: "https://crimevision-ai-cqetlerx.onslate.in/",
+    image: "/manus-storage/crimevision-visual_34d036e4.png",
+  },
+  {
+    number: "02",
+    title: "Smart Energy Monitoring",
+    eyebrow: "IOT / TELEMETRY",
+    description: "An end-to-end monitoring system combining ESP32 simulation, Thingspeak telemetry, PIR occupancy cutoffs, tariff calculation, and AI-assisted load optimization.",
+    tags: ["ESP32", "Thingspeak", "AI"],
+    href: "https://smart-energy-monitoring-nu.vercel.app/",
+    image: "/manus-storage/energy-visual_52018054.png",
+  },
+  {
+    number: "03",
+    title: "Smart Traffic Violation System",
+    eyebrow: "PHP / DATABASE SYSTEM",
+    description: "A centralized platform for managing drivers, vehicles, violations, and payments through a structured, responsive interface designed to reduce manual record keeping.",
+    tags: ["PHP", "MySQL", "Responsive UI"],
+    href: "https://smart-traffic-violation-system-xi.vercel.app/admin/login.php",
+    image: "/manus-storage/traffic-visual_7d3ba82f.png",
+  },
+];
+
+const skills = [
+  ["Frontend", "HTML5", "CSS3", "JavaScript", "Responsive design"],
+  ["Languages", "Python", "C", "C++", "PHP"],
+  ["Data & tools", "Supabase", "PostgreSQL", "Git & GitHub", "VS Code", "XAMPP"],
+];
+
+function SectionLabel({ number, children }: { number: string; children: string }) {
+  return <div className="section-label"><span>{number}</span><i />{children}</div>;
+}
+
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const onMotion = () => setReducedMotion(motion.matches);
+    onMotion(); motion.addEventListener("change", onMotion);
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add("is-visible"); }), { threshold: 0.14 });
+    document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+    return () => { motion.removeEventListener("change", onMotion); window.removeEventListener("scroll", onScroll); observer.disconnect(); };
+  }, []);
+
+  const scrollTo = (id: string) => { document.getElementById(id)?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth" }); setMenuOpen(false); };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+    <div className="portfolio-shell">
+      <div className="grain" aria-hidden="true" />
+      <header className={`site-nav ${scrolled ? "is-scrolled" : ""}`}>
+        <button className="wordmark" onClick={() => scrollTo("top")} aria-label="Return to top"><span className="wordmark-mark">◒</span>THAYA<span className="wordmark-dot">.</span></button>
+        <nav className={menuOpen ? "nav-links is-open" : "nav-links"} aria-label="Primary navigation">
+          <button onClick={() => scrollTo("work")}>Work</button><button onClick={() => scrollTo("profile")}>Profile</button><button onClick={() => scrollTo("toolkit")}>Toolkit</button><button onClick={() => scrollTo("contact")}>Contact</button>
+        </nav>
+        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close menu" : "Open menu"}>{menuOpen ? <X size={21} /> : <Menu size={21} />}</button>
+      </header>
+
+      <main id="top">
+        <section className="hero" aria-labelledby="hero-title">
+          <div className="hero-copy reveal is-visible">
+            <div className="eyebrow"><span className="pulse-dot" /> AVAILABLE FOR FRONTEND OPPORTUNITIES</div>
+            <h1 id="hero-title">Interfaces for<br /><em>systems</em> that<br />deserve to be understood.</h1>
+            <p className="hero-summary">I’m R Thayananth, a computer science student and frontend developer turning complex ideas into useful, interactive web experiences.</p>
+            <div className="hero-actions"><button className="signal-button" onClick={() => scrollTo("work")}>Trace the work <ArrowDownRight size={17} /></button><a className="text-link" href="https://github.com/thaya-fr" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={15} /></a></div>
+          </div>
+          <div className="hero-art reveal is-visible"><div className="orbital-ring ring-one" /><div className="orbital-ring ring-two" /><EvilEye reducedMotion={reducedMotion} /><div className="hero-coordinate">09° 59′ N<br />77° 28′ E</div><div className="hero-caption">01 / SIGNAL DETECTED<br /><span>CURSOR-REACTIVE VISUAL SYSTEM</span></div></div>
+          <div className="scroll-cue"><span>SCROLL TO EXPLORE</span><ArrowDownRight size={16} /></div>
+        </section>
+
+        <div className="signal-divider"><span /><span /><span /></div>
+
+        <section id="profile" className="section profile-section">
+          <div className="section-aside reveal"><SectionLabel number="01">PROFILE</SectionLabel><span className="aside-note">A builder with a<br />curious eye.</span></div>
+          <div className="profile-content reveal"><h2>I turn complex ideas into <span>clear, interactive</span> web experiences.</h2><p>Currently pursuing my second year of B.E. Computer Science and Engineering at Sri Ramakrishna Institute of Technology, I enjoy connecting thoughtful frontend design with practical backend systems.</p><div className="profile-facts"><div><small>BASED IN</small><strong><MapPin size={14} /> Theni, Tamil Nadu</strong></div><div><small>FOCUS</small><strong>Frontend development</strong></div><div><small>LANGUAGES</small><strong>Tamil · English · Hindi</strong></div></div></div>
+        </section>
+
+        <section id="work" className="section work-section">
+          <div className="section-header reveal"><div><SectionLabel number="02">SELECTED WORK</SectionLabel><h2>Built to make<br /><span>signals visible.</span></h2></div><p>Projects across AI, IoT, and management systems—each one a study in making dense information easier to act on.</p></div>
+          <div className="project-list">{projects.map((project, index) => <article className={`project-card reveal project-${index + 1}`} key={project.title}><div className="project-visual"><img src={project.image} alt="" /><div className="visual-wash" /><span className="project-number">{project.number}</span><a className="project-arrow" href={project.href} target="_blank" rel="noreferrer" aria-label={`Open ${project.title}`}><ExternalLink size={18} /></a></div><div className="project-info"><div className="project-eyebrow">{project.eyebrow}</div><h3>{project.title}</h3><p>{project.description}</p><div className="tag-row">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><a className="project-link" href={project.href} target="_blank" rel="noreferrer">View live demo <ArrowUpRight size={15} /></a></div></article>)}</div>
+        </section>
+
+        <section id="toolkit" className="section toolkit-section">
+          <div className="section-aside reveal"><SectionLabel number="03">TOOLKIT</SectionLabel><span className="aside-note">The materials<br />behind the signal.</span></div>
+          <div className="toolkit-content reveal"><h2>A practical stack,<br /><span>always learning.</span></h2><div className="skills-grid">{skills.map(([label, ...items]) => <div className="skill-group" key={label}><small>{label}</small>{items.map((item) => <div className="skill-item" key={item}>{item}<span>↗</span></div>)}</div>)}</div></div>
+        </section>
+
+        <section className="section journey-section">
+          <div className="section-aside reveal"><SectionLabel number="04">JOURNEY</SectionLabel><span className="aside-note">Curiosity in<br />motion.</span></div>
+          <div className="journey-content reveal"><div className="journey-row"><span>2024—NOW</span><div><h3>B.E. Computer Science & Engineering</h3><p>Sri Ramakrishna Institute of Technology</p></div></div><div className="journey-row"><span>HIGHLIGHTS</span><div><h3>Hackathons, security, and new interfaces.</h3><p>StudAI One Foundry Hackathon · Web Security CTF Workshop · EFX × SRIT Vibe-Coded Websites Event</p></div></div></div>
+        </section>
+
+        <section id="contact" className="contact-section"><div className="contact-eye"><span className="mini-eye">◒</span><span>05 / OPEN CHANNEL</span></div><h2>Have a problem<br />worth <em>solving?</em></h2><p>Let’s turn it into a useful interface.</p><a className="contact-button" href="mailto:thayananthraghuraman02@gmail.com">Start a conversation <Mail size={17} /></a><div className="contact-links"><a href="mailto:thayananthraghuraman02@gmail.com">thayananthraghuraman02@gmail.com</a><a href="https://github.com/thaya-fr" target="_blank" rel="noreferrer"><Github size={15} /> github.com/thaya-fr</a></div></section>
       </main>
+
+      <footer><span>R THAYANANTH · FRONTEND DEVELOPER</span><span>© 2026 / SIGNAL NOIR</span></footer>
     </div>
   );
 }

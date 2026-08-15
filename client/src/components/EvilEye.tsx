@@ -1,0 +1,123 @@
+// Signal Noir reminder: keep the Evil Eye cinematic, restrained, and functional as a hero focal point.
+import { Renderer, Program, Mesh, Triangle, Texture } from "ogl";
+import { useEffect, useRef } from "react";
+
+function hexToVec3(hex: string) {
+  const value = hex.replace("#", "");
+  return [
+    parseInt(value.slice(0, 2), 16) / 255,
+    parseInt(value.slice(2, 4), 16) / 255,
+    parseInt(value.slice(4, 6), 16) / 255,
+  ];
+}
+
+function generateNoiseTexture(size = 256) {
+  const data = new Uint8Array(size * size * 4);
+  const hash = (x: number, y: number, seed: number) => {
+    let n = x * 374761393 + y * 668265263 + seed * 1274126177;
+    n = Math.imul(n ^ (n >>> 13), 1274126177);
+    return ((n ^ (n >>> 16)) >>> 0) / 4294967296;
+  };
+  const noise = (px: number, py: number, freq: number, seed: number) => {
+    const fx = (px / size) * freq;
+    const fy = (py / size) * freq;
+    const ix = Math.floor(fx);
+    const iy = Math.floor(fy);
+    const tx = fx - ix;
+    const ty = fy - iy;
+    const wrap = (n: number) => ((n % freq) + freq) % freq;
+    const v00 = hash(wrap(ix), wrap(iy), seed);
+    const v10 = hash(wrap(ix + 1), wrap(iy), seed);
+    const v01 = hash(wrap(ix), wrap(iy + 1), seed);
+    const v11 = hash(wrap(ix + 1), wrap(iy + 1), seed);
+    return v00 * (1 - tx) * (1 - ty) + v10 * tx * (1 - ty) + v01 * (1 - tx) * ty + v11 * tx * ty;
+  };
+  for (let y = 0; y < size; y += 1) {
+    for (let x = 0; x < size; x += 1) {
+      let value = 0;
+      let amplitude = 0.4;
+      let total = 0;
+      for (let octave = 0; octave < 8; octave += 1) {
+        value += amplitude * noise(x, y, 32 * (1 << octave), octave * 31);
+        total += amplitude;
+        amplitude *= 0.65;
+      }
+      value = Math.max(0, Math.min(1, (value / total - 0.5) * 2.2 + 0.5));
+      const pixel = Math.round(value * 255);
+      const index = (y * size + x) * 4;
+      data[index] = pixel;
+      data[index + 1] = pixel;
+      data[index + 2] = pixel;
+      data[index + 3] = 255;
+    }
+  }
+  return data;
+}
+
+const vertexShader = `
+attribute vec2 uv;
+attribute vec2 position;
+varying vec2 vUv;
+void main() { vUv = uv; gl_Position = vec4(position, 0.0, 1.0); }
+`;
+
+const fragmentShader = `
+precision highp float;
+uniform float uTime; uniform vec3 uResolution; uniform sampler2D uNoiseTexture;
+uniform float uPupilSize; uniform float uIrisWidth; uniform float uGlowIntensity;
+uniform float uIntensity; uniform float uScale; uniform float uNoiseScale;
+uniform vec2 uMouse; uniform float uPupilFollow; uniform float uFlameSpeed;
+uniform vec3 uEyeColor; uniform vec3 uBgColor;
+void main() {
+  vec2 uv = (gl_FragCoord.xy * 2.0 - uResolution.xy) / uResolution.y; uv /= uScale;
+  float ft = uTime * uFlameSpeed; float polarRadius = length(uv) * 2.0;
+  float polarAngle = (2.0 * atan(uv.x, uv.y)) / 6.28 * 0.3; vec2 polarUv = vec2(polarRadius, polarAngle);
+  vec4 noiseA = texture2D(uNoiseTexture, polarUv * vec2(0.2, 7.0) * uNoiseScale + vec2(-ft * 0.1, 0.0));
+  vec4 noiseB = texture2D(uNoiseTexture, polarUv * vec2(0.3, 4.0) * uNoiseScale + vec2(-ft * 0.2, 0.0));
+  vec4 noiseC = texture2D(uNoiseTexture, polarUv * vec2(0.1, 5.0) * uNoiseScale + vec2(-ft * 0.1, 0.0));
+  float distanceMask = 1.0 - length(uv);
+  float innerRing = clamp(-((distanceMask - 0.7) / uIrisWidth), 0.0, 1.0);
+  innerRing = (innerRing * distanceMask - 0.2) / 0.28 + noiseA.r - 0.5; innerRing = clamp(innerRing * 1.3, 0.0, 1.0);
+  float outerRing = clamp(-((distanceMask - 0.5) / 0.2), 0.0, 1.0);
+  outerRing = (outerRing * distanceMask - 0.1) / 0.38 + noiseC.r - 0.5; outerRing = clamp(outerRing * 1.3, 0.0, 1.0);
+  float innerEye = (distanceMask - 0.2) * noiseB.r * 2.0;
+  vec2 pupilUv = uv - uMouse * uPupilFollow * 0.12; float pupil = clamp((1.0 - length(pupilUv * vec2(9.0, 2.3))) * uPupilSize / 0.35, 0.0, 1.0);
+  float outerEyeGlow = clamp(1.0 - length(uv * vec2(0.5, 1.5)) + 0.5, 0.0, 1.0);
+  outerEyeGlow = pow(outerEyeGlow + noiseC.r - 0.5, 2.0) + distanceMask; outerEyeGlow = clamp(outerEyeGlow * uGlowIntensity, 0.0, 1.0) * pow(1.0 - distanceMask, 2.0) * 2.5;
+  float outerBgGlow = pow(clamp(outerEyeGlow + distanceMask + 0.2, 0.0, 1.0), 0.5) * 0.15;
+  vec3 color = uEyeColor * uIntensity * clamp(max(innerRing + innerEye, outerEyeGlow + outerBgGlow) - pupil, 0.0, 3.0);
+  gl_FragColor = vec4(color + uBgColor, 1.0);
+}
+`;
+
+export default function EvilEye({ reducedMotion = false }: { reducedMotion?: boolean }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const renderer = new Renderer({ alpha: true, premultipliedAlpha: false, dpr: Math.min(window.devicePixelRatio, 2) });
+    const gl = renderer.gl;
+    gl.clearColor(0, 0, 0, 0);
+    const noiseTexture = new Texture(gl, { image: generateNoiseTexture(), width: 256, height: 256, generateMipmaps: false, flipY: false });
+    noiseTexture.minFilter = gl.LINEAR; noiseTexture.magFilter = gl.LINEAR; noiseTexture.wrapS = gl.REPEAT; noiseTexture.wrapT = gl.REPEAT;
+    const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
+    const onMouseMove = (event: MouseEvent) => { const rect = container.getBoundingClientRect(); mouse.tx = ((event.clientX - rect.left) / rect.width) * 2 - 1; mouse.ty = -(((event.clientY - rect.top) / rect.height) * 2 - 1); };
+    const onMouseLeave = () => { mouse.tx = 0; mouse.ty = 0; };
+    container.addEventListener("mousemove", onMouseMove); container.addEventListener("mouseleave", onMouseLeave);
+    const program = new Program(gl, { vertex: vertexShader, fragment: fragmentShader, uniforms: {
+      uTime: { value: 0 }, uResolution: { value: [gl.canvas.width, gl.canvas.height, 1] }, uNoiseTexture: { value: noiseTexture },
+      uPupilSize: { value: 0.6 }, uIrisWidth: { value: 0.25 }, uGlowIntensity: { value: 0.35 }, uIntensity: { value: 1.5 },
+      uScale: { value: 0.8 }, uNoiseScale: { value: 1 }, uMouse: { value: [0, 0] }, uPupilFollow: { value: reducedMotion ? 0 : 1 },
+      uFlameSpeed: { value: reducedMotion ? 0.25 : 1 }, uEyeColor: { value: hexToVec3("#FF6F37") }, uBgColor: { value: hexToVec3("#080706") },
+    }});
+    const mesh = new Mesh(gl, { geometry: new Triangle(gl), program });
+    container.appendChild(gl.canvas);
+    const resize = () => { renderer.setSize(container.offsetWidth, container.offsetHeight); program.uniforms.uResolution.value = [gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height]; };
+    resize(); window.addEventListener("resize", resize);
+    let frame = 0;
+    const update = (time: number) => { frame = requestAnimationFrame(update); mouse.x += (mouse.tx - mouse.x) * 0.05; mouse.y += (mouse.ty - mouse.y) * 0.05; program.uniforms.uMouse.value = [mouse.x, mouse.y]; program.uniforms.uTime.value = time * 0.001; renderer.render({ scene: mesh }); };
+    frame = requestAnimationFrame(update);
+    return () => { cancelAnimationFrame(frame); window.removeEventListener("resize", resize); container.removeEventListener("mousemove", onMouseMove); container.removeEventListener("mouseleave", onMouseLeave); if (container.contains(gl.canvas)) container.removeChild(gl.canvas); gl.getExtension("WEBGL_lose_context")?.loseContext(); };
+  }, [reducedMotion]);
+  return <div ref={containerRef} className="evil-eye-container" aria-label="Animated ember eye visual" role="img" />;
+}
