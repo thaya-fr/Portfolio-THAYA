@@ -125,3 +125,9 @@
 - [x] Reduce the individual card dimensions without changing the overall gallery stage.
 - [x] Preserve centered heading and description readability inside the active card.
 - [x] Verify desktop/mobile sizing and save a checkpoint.
+
+## Certification Caption Centering Fix
+
+- [x] Remove the lower-entry offset from the active caption animation.
+- [x] Center the full issuer, heading, and description block within the card.
+- [x] Verify desktop/mobile alignment and save a checkpoint.

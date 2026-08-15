@@ -55,11 +55,13 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  inset: 50% 18px auto;
+  left: 50%;
   opacity: 0;
   position: absolute;
   text-align: center;
-  transform: translateY(calc(-50% + 10px));
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 36px);
   z-index: 2;
 }
 
@@ -126,7 +128,7 @@
     min-height: 58px;
   }
   .ag-panel--active { flex: 4.6 1 0 !important; }
-  .ag-panel__label { inset: 50% 14px auto; transform: translateY(calc(-50% + 10px)); }
+  .ag-panel__label { left: 50%; top: 50%; transform: translate(-50%, -50%); width: calc(100% - 28px); }
   .ag-panel__bar { height: 3px; width: 42px; }
   .ag-panel__label strong { font-size: 19px; }
   .ag-panel__label p { font-size: 12px; max-width: 30ch; min-height: 0; }

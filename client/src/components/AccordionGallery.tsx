@@ -57,7 +57,7 @@ export default function AccordionGallery({
       const label = labelRefs.current[index];
       const tilt = active === null ? 0 : isActive ? 0 : index < active ? 2 : -2;
       timeline.to(panel, { flexGrow: isActive ? grow : 1, rotateY: tilt, duration: durationValue, ease: "power3.inOut" }, 0);
-      if (label) timeline.to(label, { opacity: isActive ? 1 : 0, y: isActive ? 0 : 10, duration: durationValue, ease: "power3.inOut" }, 0);
+      if (label) timeline.to(label, { opacity: isActive ? 1 : 0, duration: durationValue, ease: "power3.inOut" }, 0);
     });
     timelineRef.current = timeline;
   }, [active, duration, expandRatio, items.length, reduceMotion]);
