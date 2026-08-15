@@ -78,7 +78,7 @@
   color: rgba(255, 250, 244, 0.7);
   display: block;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.16em;
   margin-bottom: 10px;
@@ -88,7 +88,7 @@
 .ag-panel__label strong {
   display: block;
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(18px, 2.2vw, 34px);
+  font-size: clamp(20px, 2.45vw, 38px);
   font-weight: 800;
   letter-spacing: -0.045em;
   line-height: 1.02;
@@ -96,7 +96,7 @@
 
 .ag-panel__label p {
   color: rgba(255, 250, 244, 0.84);
-  font-size: clamp(13px, 1.15vw, 16px);
+  font-size: clamp(15px, 1.3vw, 18px);
   font-weight: 800;
   line-height: 1.5;
   margin: 14px auto 0;
@@ -130,9 +130,9 @@
   .ag-panel--active { flex: 4.6 1 0 !important; }
   .ag-panel__label { left: 50%; top: 50%; transform: translate(-50%, -50%); width: calc(100% - 28px); }
   .ag-panel__bar { height: 3px; width: 42px; }
-  .ag-panel__label strong { font-size: 19px; }
-  .ag-panel__label p { font-size: 12px; max-width: 30ch; min-height: 0; }
-  .ag-panel__issuer { font-size: 9px; margin-bottom: 7px; }
+  .ag-panel__label strong { font-size: 21px; }
+  .ag-panel__label p { font-size: 14px; max-width: 30ch; min-height: 0; }
+  .ag-panel__issuer { font-size: 11px; margin-bottom: 7px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

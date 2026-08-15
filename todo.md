@@ -137,3 +137,9 @@
 - [x] Create a bright-orange top, warm shaded middle, and near-black bottom card gradient.
 - [x] Preserve centered content contrast and hover behavior.
 - [x] Verify desktop/mobile cards and save a checkpoint.
+
+## Certification Card Typography Increase
+
+- [x] Increase the issuer, heading, and description font sizes by about two steps.
+- [x] Preserve centered alignment and compact card fit.
+- [x] Verify desktop/mobile readability and save a checkpoint.
