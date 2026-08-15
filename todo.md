@@ -93,3 +93,9 @@
 - [x] Add clipped card edges and a smoother cross-card transition.
 - [x] Add spacing between EFX × SRIT, and strengthen the Journey supporting text size and weight.
 - [x] Verify desktop/mobile interaction and save a checkpoint.
+
+## Simplified Certification Card Copy
+
+- [x] Make each certification card caption contain only a clear heading and concise description.
+- [x] Remove issuer-prefix clutter from the visible caption while retaining the certification meaning.
+- [x] Verify the simplified gallery and save a checkpoint.
