@@ -183,3 +183,10 @@
 - [x] Remove the large set of inline font-size overrides introduced by the visual editor.
 - [x] Preserve intended typography through the editor-safe CSS layer.
 - [x] Verify desktop/mobile rendering and save a checkpoint.
+
+## Latest Typography Visibility Diagnosis
+
+- [x] Identify which latest typography change is not appearing and which selector controls it.
+- [x] Check for stale visual-editor overrides or CSS specificity conflicts.
+- [x] Apply the typography fix reliably and verify it visually.
+- [x] Save a checkpoint after confirmation.

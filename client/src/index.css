@@ -99,38 +99,38 @@ footer { font-size: 10px; }
   .project-visual .project-arrow { right: 17px; bottom: 17px; }
 }
 
-/* Editor-safe typography lock: explicit final values keep visual edits visible even when stale inline styles are present. */
-.eyebrow { font-size: 13px !important; }
-.section-label { font-size: 14px !important; }
-.hero-summary { font-size: 20px !important; line-height: 1.6; }
-.hero-actions .signal-button { font-size: 14px !important; }
-.hero-actions .text-link { font-size: 15px !important; }
-.scroll-cue { font-size: 12px !important; }
-.profile-content > p { font-size: 17px !important; margin-top: 24px; }
-.profile-facts small { font-size: 13px !important; }
-.profile-facts strong { font-size: 15px !important; }
-.section-header > p { font-size: 17px !important; }
-.project-eyebrow { font-size: 13px !important; }
-.project-info h3 { font-size: clamp(31px, 3.15vw, 46px) !important; }
-.project-info p { font-size: 17px !important; }
-.tag-row span { font-size: 12px !important; }
-.project-link { font-size: 15px !important; }
-.skill-group small { font-size: 13px !important; }
-.skill-item { font-size: 18px !important; }
-.journey-row > span { font-size: 14px !important; }
-.journey-row h3 { font-size: 29px !important; }
-.journey-row p { font-size: 21px !important; }
-.contact-eye { font-size: 13px !important; }
-.contact-section p { font-size: 19px !important; }
-.contact-links a { font-size: 16px !important; }
-footer { font-size: 12px !important; }
+/* Editor-friendly typography defaults: visual-editor inline sizes can override these normal selectors. */
+.eyebrow { font-size: 13px; }
+.section-label { font-size: 14px; }
+.hero-summary { font-size: 20px; line-height: 1.6; }
+.hero-actions .signal-button { font-size: 14px; }
+.hero-actions .text-link { font-size: 15px; }
+.scroll-cue { font-size: 12px; }
+.profile-content > p { font-size: 17px; margin-top: 24px; }
+.profile-facts small { font-size: 13px; }
+.profile-facts strong { font-size: 15px; }
+.section-header > p { font-size: 17px; }
+.project-eyebrow { font-size: 13px; }
+.project-info h3 { font-size: clamp(31px, 3.15vw, 46px); }
+.project-info p { font-size: 17px; }
+.tag-row span { font-size: 12px; }
+.project-link { font-size: 15px; }
+.skill-group small { font-size: 13px; }
+.skill-item { font-size: 18px; }
+.journey-row > span { font-size: 14px; }
+.journey-row h3 { font-size: 29px; }
+.journey-row p { font-size: 21px; }
+.contact-eye { font-size: 13px; }
+.contact-section p { font-size: 19px; }
+.contact-links a { font-size: 16px; }
+footer { font-size: 12px; }
 @media (max-width: 800px) {
-  .hero-summary { font-size: 17px !important; }
-  .section-label { font-size: 12px !important; }
-  .profile-content > p { font-size: 16px !important; }
-  .project-info h3 { font-size: 30px !important; }
-  .project-info p { font-size: 16px !important; }
-  .journey-row h3 { font-size: 24px !important; }
-  .journey-row p { font-size: 17px !important; }
-  .contact-links a { font-size: 14px !important; }
+  .hero-summary { font-size: 17px; }
+  .section-label { font-size: 12px; }
+  .profile-content > p { font-size: 16px; }
+  .project-info h3 { font-size: 30px; }
+  .project-info p { font-size: 16px; }
+  .journey-row h3 { font-size: 24px; }
+  .journey-row p { font-size: 17px; }
+  .contact-links a { font-size: 14px; }
 }
