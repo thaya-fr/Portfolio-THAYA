@@ -257,3 +257,9 @@
 - [x] Inspect the duplicated Journey 17px and padding style props.
 - [x] Preserve 17px typography with 6px right and 4px left padding through clean CSS.
 - [x] Verify desktop/mobile Journey rendering and save a checkpoint.
+
+## THAYA. Glitch Text Animation
+
+- [x] Inspect the current THAYA. wordmark implementation.
+- [x] Replace the scroll-only treatment with a dedicated glitch animation on THAYA. only.
+- [x] Verify desktop/mobile wordmark rendering and save a checkpoint.
