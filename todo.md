@@ -287,3 +287,9 @@
 - [x] Inspect the certification gallery and supplied glare behavior.
 - [x] Add an active-card glare reveal without changing the gallery’s existing interaction model.
 - [x] Verify desktop/mobile card reveals and save a checkpoint.
+
+## Certification Glare Timing Refinement
+
+- [x] Inspect the current glare transition timing.
+- [x] Slow the glare sweep to a smoother duration without changing card behavior.
+- [x] Verify desktop/mobile certification cards and save a checkpoint.
