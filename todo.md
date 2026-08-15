@@ -99,3 +99,9 @@
 - [x] Make each certification card caption contain only a clear heading and concise description.
 - [x] Remove issuer-prefix clutter from the visible caption while retaining the certification meaning.
 - [x] Verify the simplified gallery and save a checkpoint.
+
+## Text-First Certification Gallery
+
+- [x] Remove image data and image rendering from certification panels.
+- [x] Style the panels around headings, descriptions, issuer accents, and numbered markers.
+- [x] Verify the no-image gallery on desktop/mobile and save a checkpoint.
