@@ -170,3 +170,10 @@
 - [x] Remove duplicated inline style props introduced by the latest visual editor pass.
 - [x] Preserve the intended readable typography increases using clean CSS selectors.
 - [x] Verify desktop/mobile rendering and save a checkpoint.
+
+## Typography Cascade Diagnosis
+
+- [x] Identify which typography edit is not visibly changing and locate its active selector.
+- [x] Check for CSS specificity or stale inline-style overrides.
+- [x] Apply the fix at the correct selector level and verify it visually.
+- [x] Save a checkpoint if code changes are required.
