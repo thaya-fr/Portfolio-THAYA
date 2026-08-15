@@ -64,6 +64,8 @@ export default function Home() {
   return (
     <div className="portfolio-shell">
       <div className="grain" aria-hidden="true" />
+      <div className="global-eye-layer" aria-hidden="true"><EvilEye reducedMotion={reducedMotion} /></div>
+      <div className="page-veil" aria-hidden="true" />
       <header className={`site-nav ${scrolled ? "is-scrolled" : ""}`}>
         <button className="wordmark" onClick={() => scrollTo("top")} aria-label="Return to top"><span className="wordmark-mark">◒</span>THAYA<span className="wordmark-dot">.</span></button>
         <nav className={menuOpen ? "nav-links is-open" : "nav-links"} aria-label="Primary navigation">
@@ -80,7 +82,7 @@ export default function Home() {
             <p className="hero-summary">I’m R Thayananth, a computer science student and frontend developer turning complex ideas into useful, interactive web experiences.</p>
             <div className="hero-actions"><button className="signal-button" onClick={() => scrollTo("work")}>Trace the work <ArrowDownRight size={17} /></button><a className="text-link" href="https://github.com/thaya-fr" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={15} /></a></div>
           </div>
-          <div className="hero-art reveal is-visible"><div className="orbital-ring ring-one" /><div className="orbital-ring ring-two" /><EvilEye reducedMotion={reducedMotion} /><div className="hero-coordinate">09° 59′ N<br />77° 28′ E</div><div className="hero-caption">01 / SIGNAL DETECTED<br /><span>CURSOR-REACTIVE VISUAL SYSTEM</span></div></div>
+          <div className="hero-art reveal is-visible"><div className="orbital-ring ring-one" /><div className="orbital-ring ring-two" /><div className="hero-coordinate">09° 59′ N<br />77° 28′ E</div><div className="hero-caption">01 / SIGNAL DETECTED<br /><span>FULL-PAGE VISUAL SYSTEM</span></div></div>
           <div className="scroll-cue"><span>SCROLL TO EXPLORE</span><ArrowDownRight size={16} /></div>
         </section>
 

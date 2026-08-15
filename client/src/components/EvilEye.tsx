@@ -103,7 +103,7 @@ export default function EvilEye({ reducedMotion = false }: { reducedMotion?: boo
     const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
     const onMouseMove = (event: MouseEvent) => { const rect = container.getBoundingClientRect(); mouse.tx = ((event.clientX - rect.left) / rect.width) * 2 - 1; mouse.ty = -(((event.clientY - rect.top) / rect.height) * 2 - 1); };
     const onMouseLeave = () => { mouse.tx = 0; mouse.ty = 0; };
-    container.addEventListener("mousemove", onMouseMove); container.addEventListener("mouseleave", onMouseLeave);
+    window.addEventListener("mousemove", onMouseMove); window.addEventListener("mouseleave", onMouseLeave);
     const program = new Program(gl, { vertex: vertexShader, fragment: fragmentShader, uniforms: {
       uTime: { value: 0 }, uResolution: { value: [gl.canvas.width, gl.canvas.height, 1] }, uNoiseTexture: { value: noiseTexture },
       uPupilSize: { value: 0.6 }, uIrisWidth: { value: 0.25 }, uGlowIntensity: { value: 0.35 }, uIntensity: { value: 1.5 },
@@ -117,7 +117,7 @@ export default function EvilEye({ reducedMotion = false }: { reducedMotion?: boo
     let frame = 0;
     const update = (time: number) => { frame = requestAnimationFrame(update); mouse.x += (mouse.tx - mouse.x) * 0.05; mouse.y += (mouse.ty - mouse.y) * 0.05; program.uniforms.uMouse.value = [mouse.x, mouse.y]; program.uniforms.uTime.value = time * 0.001; renderer.render({ scene: mesh }); };
     frame = requestAnimationFrame(update);
-    return () => { cancelAnimationFrame(frame); window.removeEventListener("resize", resize); container.removeEventListener("mousemove", onMouseMove); container.removeEventListener("mouseleave", onMouseLeave); if (container.contains(gl.canvas)) container.removeChild(gl.canvas); gl.getExtension("WEBGL_lose_context")?.loseContext(); };
+    return () => { cancelAnimationFrame(frame); window.removeEventListener("resize", resize); window.removeEventListener("mousemove", onMouseMove); window.removeEventListener("mouseleave", onMouseLeave); if (container.contains(gl.canvas)) container.removeChild(gl.canvas); gl.getExtension("WEBGL_lose_context")?.loseContext(); };
   }, [reducedMotion]);
   return <div ref={containerRef} className="evil-eye-container" aria-label="Animated ember eye visual" role="img" />;
 }
