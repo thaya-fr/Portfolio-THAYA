@@ -143,3 +143,9 @@
 - [x] Increase the issuer, heading, and description font sizes by about two steps.
 - [x] Preserve centered alignment and compact card fit.
 - [x] Verify desktop/mobile readability and save a checkpoint.
+
+## Portfolio-Wide Small Type Increase
+
+- [x] Slightly increase typography in the affected hero and supporting content areas.
+- [x] Slightly increase project links, Journey, Contact, and Footer text where targeted.
+- [x] Verify desktop/mobile hierarchy and save a checkpoint.

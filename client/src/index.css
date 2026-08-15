@@ -53,3 +53,21 @@ h1, h2, h3, p { margin: 0; } h1, h2, h3 { font-family: "Space Grotesk", sans-ser
   .certifications-section .accordion-gallery { min-height: 700px; }
   .certifications-section .ag-panel { min-height: 72px; }
 }
+
+/* Signal Noir small type lift: improve scanability across the editor-targeted supporting text without overpowering the display headings. */
+.section-label,
+.project-eyebrow,
+.contact-eye { font-size: 11px; }
+.section-header > p,
+.project-info p { font-size: 15px; }
+.project-info h3 { font-size: clamp(30px, 3.15vw, 45px); }
+.tag-row span { font-size: 10px; }
+.project-link,
+.text-link { font-size: 13px; }
+.journey-row > span { font-size: 12px; }
+.journey-row h3 { font-size: 27px; }
+.journey-row p { font-size: 20px; }
+.contact-section p { font-size: 19px; }
+.contact-eye { font-size: 11px; }
+.contact-links a { font-size: 14px; }
+footer { font-size: 10px; }
