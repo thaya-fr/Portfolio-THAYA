@@ -196,3 +196,9 @@
 - [x] Confirm the latest 24px hero typography edit is present.
 - [x] Remove duplicated inline styles while preserving the intended visible size.
 - [x] Verify desktop/mobile hero layout and save a checkpoint.
+
+## Profile Typography Verification
+
+- [x] Confirm the latest 17px Profile typography edit is present.
+- [x] Remove duplicated inline styles while preserving the intended visible size.
+- [x] Verify desktop/mobile Profile layout and save a checkpoint.
