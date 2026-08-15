@@ -217,3 +217,15 @@ footer { font-size: 12px; }
   .contact-scroll-float .scroll-float-desktop { display: none !important; }
   .contact-scroll-float .scroll-float-mobile { display: block !important; }
 }
+
+/* Latest Journey visual edit: clean 22px content, 20px timeline labels, valid section inset. */
+.journey-section { padding-right: calc(clamp(24px, 8vw, 126px) + 6px); }
+.journey-section .journey-row > span { font-size: 20px; }
+.journey-section .journey-row h3,
+.journey-section .journey-row p { font-size: 22px; }
+@media (max-width: 800px) {
+  .journey-section { padding-right: 26px; }
+  .journey-section .journey-row > span { font-size: 20px; }
+  .journey-section .journey-row h3,
+  .journey-section .journey-row p { font-size: 22px; }
+}

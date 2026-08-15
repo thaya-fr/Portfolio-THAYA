@@ -299,3 +299,9 @@
 - [x] Inspect the current glare timing.
 - [x] Set the glare transition to exactly 1350ms.
 - [x] Verify the certification cards and save a checkpoint.
+
+## Journey 22px Typography Verification
+
+- [x] Inspect the duplicated Journey 22px and invalid padding style props.
+- [x] Preserve 22px heading/body text, 20px labels, and valid Journey spacing through clean CSS.
+- [x] Verify desktop/mobile Journey rendering and save a checkpoint.
