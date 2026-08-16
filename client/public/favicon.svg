@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Signal Orbit favicon">
+  <title>Signal Orbit</title>
+  <circle cx="32" cy="32" r="11" fill="#0b0a09"/>
+  <path d="M49.7 21.9A22.8 22.8 0 0 0 42.1 14.3M21.9 14.3A22.8 22.8 0 0 0 14.3 21.9M14.3 42.1A22.8 22.8 0 0 0 21.9 49.7M42.1 49.7A22.8 22.8 0 0 0 49.7 42.1" fill="none" stroke="#ff6f37" stroke-linecap="round" stroke-width="7"/>
+</svg>
