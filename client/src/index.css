@@ -266,3 +266,9 @@ footer { font-size: 12px; }
   .journey-section .journey-row h3,
   .journey-section .journey-row p { padding-left: 0; }
 }
+
+/* Mobile Work visibility and footer integrity: ScrollFloat falls back to its desktop copy, while footer labels remain whole lines. */
+@media (max-width: 800px) {
+  footer { gap: 6px; letter-spacing: .08em; }
+  footer span { display: block; white-space: nowrap; }
+}

@@ -84,7 +84,7 @@ const ScrollFloat = ({
   return (
     <Tag ref={containerRef} className={`scroll-float ${containerClassName}`.trim()}>
       <span className={`scroll-float-text scroll-float-desktop ${textClassName}`.trim()}>{renderText(desktopText)}</span>
-      {mobileText && <span className={`scroll-float-text scroll-float-mobile ${textClassName}`.trim()}>{renderText(mobileText)}</span>}
+      <span className={`scroll-float-text scroll-float-mobile ${textClassName}`.trim()}>{renderText(mobileText ?? desktopText)}</span>
     </Tag>
   );
 };
